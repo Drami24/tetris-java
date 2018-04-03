@@ -11,6 +11,7 @@ import javax.swing.border.EmptyBorder;
 
 public class VentanaPrincipal extends JFrame {
 
+	
 	private JPanel contentPane;
 	private JPanel panelXogo;
 	private JToggleButton tglbtnPausa;
