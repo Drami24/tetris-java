@@ -4,12 +4,17 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JToggleButton;
 import javax.swing.border.EmptyBorder;
 
 public class VentanaPrincipal extends JFrame {
 
 	private JPanel contentPane;
+	private JPanel panelXogo;
+	private JToggleButton tglbtnPausa;
+	private JLabel lblNumlinas;
 
 	/**
 	 * Launch the application.
@@ -37,6 +42,16 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		panelXogo = new JPanel();
+		contentPane.add(panelXogo, BorderLayout.CENTER);
+	}
+	
+	public void pintarCadrado(JLabel lblCadrado) {
+		
+	}
+	
+	public void borrarCadrado(JLabel lblCadrado) {
+		
 	}
 
 }
