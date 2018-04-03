@@ -15,6 +15,7 @@ public class VentanaPrincipal extends JFrame {
 	private JPanel panelXogo;
 	private JToggleButton tglbtnPausa;
 	private JLabel lblNumlinas;
+	private Xogo xogoActual = null;
 
 	/**
 	 * Launch the application.
@@ -37,7 +38,8 @@ public class VentanaPrincipal extends JFrame {
 	 */
 	public VentanaPrincipal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 900);
+		setResizable(false);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -45,13 +47,25 @@ public class VentanaPrincipal extends JFrame {
 		panelXogo = new JPanel();
 		contentPane.add(panelXogo, BorderLayout.CENTER);
 	}
+
+	private void iniciarPartida(){
+
+    }
 	
 	public void pintarCadrado(JLabel lblCadrado) {
-		
+
 	}
 	
 	public void borrarCadrado(JLabel lblCadrado) {
 		
 	}
+
+	public void mostrarNumeroLinas(int numeroLinas){
+
+    }
+
+    public void mostrarFinDoXogo(){
+
+    }
 
 }
