@@ -2,21 +2,7 @@
 # Created by https://www.gitignore.io/api/java,eclipse,intellij
 
 ### Eclipse ###
-
 bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-.loadpath
-.recommenders
-
-# External tool builders
-.externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
-*.launch
 
 # PyDev specific (Python IDE for Eclipse)
 *.pydevproject
@@ -29,9 +15,6 @@ tmp/
 
 # PDT-specific (PHP Development Tools)
 .buildpath
-
-# sbteclipse plugin
-.target
 
 # Tern plugin
 .tern-project
