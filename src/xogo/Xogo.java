@@ -10,6 +10,7 @@ public class Xogo {
     private int numeroLinas;
     private VentanaPrincipal ventanaPrincipal;
     private ArrayList<Cadrado> cadradosChan;
+    private Ficha fichaActual;
 
     public Xogo (VentanaPrincipal ventanaPrincipal){
         this.ventanaPrincipal = ventanaPrincipal;

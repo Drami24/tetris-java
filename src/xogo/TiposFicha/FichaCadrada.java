@@ -9,6 +9,7 @@ public class FichaCadrada extends Ficha {
 
     public FichaCadrada(ArrayList<Cadrado> cadrados){
         super.setCadrados(cadrados);
+
     }
 
     @Override
