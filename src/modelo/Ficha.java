@@ -1,4 +1,4 @@
-package xogo;
+package modelo;
 
 import java.util.ArrayList;
 
