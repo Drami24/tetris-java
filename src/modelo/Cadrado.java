@@ -4,19 +4,21 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Cadrado {
+	
     private int x;
     private int y;
     private Color corRecheo;
     private JLabel lblCadrado;
 
-    public Cadrado() {
-
+    public Cadrado(int x, int y, Color corRecheo, JLabel lblCadrado) {
+    	this.x = x;
+    	this.y = y;
+    	this.corRecheo = corRecheo;
+    	this.lblCadrado = lblCadrado;
     }
 
     public String getCoordenadas() {
-        return null;
+        return String.valueOf(x) + String.valueOf(y);
     }
 
 }
-
-
