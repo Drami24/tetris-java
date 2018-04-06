@@ -10,9 +10,11 @@ import javax.swing.Timer;
 import javax.swing.border.EmptyBorder;
 
 import modelo.Xogo;
+import tiposficha.FichaCadrada;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
@@ -97,7 +99,7 @@ public class VentanaPrincipal extends JFrame {
     }
 	
 	public void pintarCadrado(JLabel lblCadrado) {
-
+		
 	}
 	
 	public void borrarCadrado(JLabel lblCadrado) {

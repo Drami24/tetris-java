@@ -19,15 +19,15 @@ public class Xogo {
     }
     
     public void moverFichaDereita() {
-    	
+    	// TODO
     }
     
     public void moverFichaEsquerda() {
-    	
+    	// TODO
     }
     
     public void moverFichaAbaixo() {
-    	
+    	// TODO
     }
     
     public void rotarFicha() {
@@ -38,8 +38,8 @@ public class Xogo {
     	
     }
     
-    private void xenerarNovaFicha() {
-    	
+    private void xenerarNovaFicha(Arraylist<Cadrado> cadrado) {
+		FichaCadrada novoCadrado = new FichaCadrada(cadrado);
     }
     
     private void engadirFichaAoChan() {

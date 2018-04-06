@@ -10,7 +10,11 @@ public abstract class Ficha {
     public abstract boolean moverAbaixo();
     public abstract boolean rotar();
 
-    public void setCadrados(ArrayList<Cadrado> cadrados) {
+	public ArrayList<Cadrado> getCadrados() {
+		return cadrados;
+	}
+	public void setCadrados(ArrayList<Cadrado> cadrados) {
         this.cadrados = cadrados;
     }
+	
 }

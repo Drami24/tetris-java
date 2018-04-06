@@ -6,12 +6,17 @@ import modelo.Cadrado;
 import modelo.Ficha;
 
 public class FichaCadrada extends Ficha {
-
+	
+	ArrayList<Cadrado> fichaCadrada = getCadrados();
+	
+	public ArrayList<Cadrado> getCadrados() {
+		return super.getCadrados();
+	}
+	
     public FichaCadrada(ArrayList<Cadrado> cadrados){
-        super.setCadrados(cadrados);
-
+        this.fichaCadrada = cadrados;
     }
-
+    
     @Override
     public boolean moverDereita() {
         return false;
