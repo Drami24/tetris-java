@@ -38,9 +38,11 @@ public class Xogo {
     	
     }
     
-    private void xenerarNovaFicha(Arraylist<Cadrado> cadrado) {
-		FichaCadrada novoCadrado = new FichaCadrada(cadrado);
-    }
+//    private void xenerarNovaFicha(Arraylist<Cadrado> cadrado) {
+//		FichaCadrada novoCadrado = new FichaCadrada(cadrado);
+//		
+//		
+//    }
     
     private void engadirFichaAoChan() {
     	
