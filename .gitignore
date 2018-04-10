@@ -124,3 +124,7 @@ hs_err_pid*
 
 
 # End of https://www.gitignore.io/api/java,eclipse,intellij
+.idea/workspace.xml
+.metadata/.lock
+.metadata/.plugins/org.eclipse.core.resources/.root/3.tree
+.metadata/.plugins/org.eclipse.core.resources/.root/4.tree
