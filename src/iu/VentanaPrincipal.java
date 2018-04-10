@@ -64,6 +64,7 @@ public class VentanaPrincipal extends JFrame {
 		JButton btnNewButton = new JButton("Nova Partida");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				iniciarPartida();
 			}
 		});
 		btnNewButton.setBounds(10, 11, 155, 23);
@@ -95,7 +96,7 @@ public class VentanaPrincipal extends JFrame {
 	}
 
 	private void iniciarPartida(){
-
+		Xogo inicioXogo = new Xogo(this);
     }
 	
 	public void pintarCadrado(JLabel lblCadrado) {

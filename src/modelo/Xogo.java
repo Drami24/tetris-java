@@ -2,12 +2,17 @@ package modelo;
 
 import java.util.ArrayList;
 
+import javax.swing.JLabel;
+
+import com.sun.prism.paint.Color;
+
 import iu.VentanaPrincipal;
+import tiposficha.FichaCadrada;
 
 public class Xogo {
-    private final int LADO_CADRADO = 30;
-    private final int MAX_X = 300;
-    private final int MAX_Y = 900;
+    private final static int LADO_CADRADO = 30;
+    private final static int MAX_X = 300;
+    private final static int MAX_Y = 900;
     private boolean pausa;
     private int numeroLinas;
     private VentanaPrincipal ventanaPrincipal;
@@ -16,6 +21,7 @@ public class Xogo {
 
     public Xogo (VentanaPrincipal ventanaPrincipal){
         this.ventanaPrincipal = ventanaPrincipal;
+        this.xenerarNovaFicha();
     }
     
     public void moverFichaDereita() {
@@ -38,11 +44,11 @@ public class Xogo {
     	
     }
     
-//    private void xenerarNovaFicha(Arraylist<Cadrado> cadrado) {
-//		FichaCadrada novoCadrado = new FichaCadrada(cadrado);
-//		
-//		
-//    }
+    private void xenerarNovaFicha() {
+		FichaCadrada cuadrado = new FichaCadrada();
+		
+		
+    }
     
     private void engadirFichaAoChan() {
     	
