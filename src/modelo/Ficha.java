@@ -3,7 +3,7 @@ package modelo;
 import java.util.ArrayList;
 
 public abstract class Ficha {
-    private ArrayList<Cadrado> cadrados;
+    private ArrayList<Cadrado> cadrados = new ArrayList<>();
     private Xogo xogo;
     
     public ArrayList<Cadrado> getCadrados() {
@@ -17,6 +17,5 @@ public abstract class Ficha {
     public abstract boolean moverEsquerda();
     public abstract boolean moverAbaixo();
     public abstract boolean rotar();
-    
 
 }

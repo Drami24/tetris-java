@@ -2,17 +2,13 @@ package modelo;
 
 import java.util.ArrayList;
 
-import javax.swing.JLabel;
-
-import com.sun.prism.paint.Color;
-
 import iu.VentanaPrincipal;
 import tiposficha.FichaCadrada;
 
 public class Xogo {
-    private final static int LADO_CADRADO = 30;
-    private final static int MAX_X = 300;
-    private final static int MAX_Y = 900;
+    public final static int LADO_CADRADO = 30;
+    public final static int MAX_X = 300;
+    public final static int MAX_Y = 900;
     private boolean pausa;
     private int numeroLinas;
     private VentanaPrincipal ventanaPrincipal;
@@ -45,9 +41,10 @@ public class Xogo {
     }
     
     private void xenerarNovaFicha() {
-		FichaCadrada cuadrado = new FichaCadrada();
-		
-		
+		FichaCadrada fichaCadrado = new FichaCadrada();
+		for (Cadrado cadrado : fichaCadrado.getCadrados()) {
+		    ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
+        }
     }
     
     private void engadirFichaAoChan() {

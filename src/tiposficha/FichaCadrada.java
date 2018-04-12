@@ -1,9 +1,6 @@
 package tiposficha;
 
-import java.awt.Color;
-import java.util.ArrayList;
-
-import javax.swing.JLabel;
+import java.awt.*;
 
 import modelo.Cadrado;
 import modelo.Ficha;
@@ -11,11 +8,10 @@ import modelo.Ficha;
 public class FichaCadrada extends Ficha {
 
 	public FichaCadrada() {
-		JLabel lblCadrado = new JLabel("");
-		Cadrado cadrado0 = new Cadrado(30, 870, Color.BLUE, lblCadrado);
-		Cadrado cadrado1 = new Cadrado(30, 840, Color.BLUE, lblCadrado);
-		Cadrado cadrado2 = new Cadrado(60, 870, Color.BLUE, lblCadrado);
-		Cadrado cadrado3 = new Cadrado(60, 840, Color.BLUE, lblCadrado);
+		Cadrado cadrado0 = new Cadrado(172, 11, Color.BLUE);
+		Cadrado cadrado1 = new Cadrado(300, 100, Color.BLUE);
+		Cadrado cadrado2 = new Cadrado(400, 200, Color.BLUE);
+		Cadrado cadrado3 = new Cadrado(0, 0, Color.BLUE);
 		getCadrados().add(cadrado0);
 		getCadrados().add(cadrado1);
 		getCadrados().add(cadrado2);

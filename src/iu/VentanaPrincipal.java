@@ -10,11 +10,9 @@ import javax.swing.Timer;
 import javax.swing.border.EmptyBorder;
 
 import modelo.Xogo;
-import tiposficha.FichaCadrada;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
@@ -23,6 +21,7 @@ public class VentanaPrincipal extends JFrame {
 	private Timer timer;
 	private JPanel contentPane;
 	private JPanel panelXogo;
+	private JPanel panelTetris;
 	private JToggleButton tglbtnPausa;
 	private JLabel lblNumlinas;
 	private Xogo xogoActual = null;
@@ -90,17 +89,18 @@ public class VentanaPrincipal extends JFrame {
 		btnRotar.setBounds(220, 803, 89, 23);
 		panelXogo.add(btnRotar);
 		
-		JPanel panel = new JPanel();
-		panel.setBounds(20, 47, 392, 696);
-		panelXogo.add(panel);
+		panelTetris = new JPanel();
+		panelTetris.setBounds(20, 47, 392, 696);
+		panelXogo.add(panelTetris);
+		panelTetris.setLayout(null);
 	}
 
 	private void iniciarPartida(){
-		Xogo inicioXogo = new Xogo(this);
-    }
+		xogoActual = new Xogo(this);
+	}
 	
 	public void pintarCadrado(JLabel lblCadrado) {
-		
+		panelTetris.add(lblCadrado);
 	}
 	
 	public void borrarCadrado(JLabel lblCadrado) {
