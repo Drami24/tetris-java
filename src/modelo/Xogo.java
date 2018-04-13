@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import iu.VentanaPrincipal;
 import tiposficha.FichaCadrada;
 
+import javax.swing.*;
+
 public class Xogo {
     public final static int LADO_CADRADO = 30;
     public final static int MAX_X = 300;
@@ -43,9 +45,9 @@ public class Xogo {
     private void xenerarNovaFicha() {
 		FichaCadrada fichaCadrado = new FichaCadrada();
 		for (Cadrado cadrado : fichaCadrado.getCadrados()) {
-		    ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
+		    ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado(), new JPanel());
+            System.out.println("cadrado xerado");
         }
-		System.out.println("ficha xerada");
     }
     
     private void engadirFichaAoChan() {

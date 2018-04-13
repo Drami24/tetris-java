@@ -9,6 +9,7 @@ public abstract class Ficha {
     public ArrayList<Cadrado> getCadrados() {
  		return cadrados;
  	}
+
  	public void setCadrados(ArrayList<Cadrado> cadrados) {
  		this.cadrados = cadrados;
  	}
