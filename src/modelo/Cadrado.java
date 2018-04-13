@@ -10,15 +10,16 @@ public class Cadrado{
     private int y;
     private Color corRecheo;
     private JLabel lblCadrado;
-    
+        
     public Cadrado(int x, int y, Color corRecheo) {
     	this.x = x;
     	this.y = y;
     	this.corRecheo = corRecheo;
-    	JLabel cadrado = new JLabel("asd");
+    	JLabel cadrado = new JLabel();
     	cadrado.setBounds(this.x, this.y, Xogo.LADO_CADRADO, Xogo.LADO_CADRADO);
+    	cadrado.setBackground(corRecheo);
     	cadrado.setOpaque(true);
-    	cadrado.setBorder(new LineBorder(Color.BLACK, 5));
+    	cadrado.setBorder(new LineBorder(Color.BLACK, 2));
     	this.lblCadrado = cadrado;
     }
 

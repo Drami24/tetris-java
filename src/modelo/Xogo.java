@@ -45,6 +45,7 @@ public class Xogo {
 		for (Cadrado cadrado : fichaCadrado.getCadrados()) {
 		    ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
         }
+		System.out.println("ficha xerada");
     }
     
     private void engadirFichaAoChan() {

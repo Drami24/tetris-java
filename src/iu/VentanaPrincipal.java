@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.JToggleButton;
 import javax.swing.Timer;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 
 import modelo.Xogo;
 
@@ -25,7 +26,8 @@ public class VentanaPrincipal extends JFrame {
 	private JToggleButton tglbtnPausa;
 	private JLabel lblNumlinas;
 	private Xogo xogoActual = null;
-
+	JLabel nCadrado;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -93,10 +95,20 @@ public class VentanaPrincipal extends JFrame {
 		panelTetris.setBounds(20, 47, 392, 696);
 		panelXogo.add(panelTetris);
 		panelTetris.setLayout(null);
+		
+		nCadrado = new JLabel();
+		nCadrado.setBounds(0, 0, 30, 30);
+		nCadrado.setBackground(Color.BLUE);
+		nCadrado.setOpaque(true);
+		nCadrado.setBorder(new LineBorder(Color.BLACK, 2));
+		//pintarCadrado(nCadrado);
+		
 	}
 
 	private void iniciarPartida(){
-		xogoActual = new Xogo(this);
+		//xogoActual = new Xogo(this);
+		pintarCadrado(nCadrado);
+		System.out.println("click");
 	}
 	
 	public void pintarCadrado(JLabel lblCadrado) {
