@@ -64,7 +64,7 @@ public class VentanaPrincipal {
         System.out.println("click");
 		xogoActual = new Xogo(this);
 	}
-
+	
     public void pintarCadrado(JLabel lblCadrado, JPanel panelTetris) {
 		panelTetris.add(lblCadrado);
 	}
@@ -111,6 +111,7 @@ public class VentanaPrincipal {
 		JButton btnNovaPartida = new JButton("Nova Partida");
 		btnNovaPartida.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+                // FIXME: 14/04/2018 Non podemos pintar cadrado dende este contexto, necesita solucion
                 pintarCadrado(obterCadradoDeProba(), panelTetris);
 				iniciarPartida();
 			}
