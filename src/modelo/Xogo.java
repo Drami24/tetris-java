@@ -21,9 +21,16 @@ public class Xogo {
         this.ventanaPrincipal = ventanaPrincipal;
         fichaActual = xenerarNovaFicha();
     }
-    
+
+    // FIXME: 14/04/2018 A ficha non se esta movendo a dereita
     public void moverFichaDereita() {
+        for (Cadrado cadrado : fichaActual.getCadrados()){
+            ventanaPrincipal.borrarCadrado(cadrado.getLblCadrado());
+        }
         fichaActual.moverDereita();
+        for (Cadrado cadrado : fichaActual.getCadrados()){
+            ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
+        }
     }
     
     public void moverFichaEsquerda() {
@@ -46,8 +53,6 @@ public class Xogo {
 		FichaCadrada fichaCadrado = new FichaCadrada();
 		for (Cadrado cadrado : fichaCadrado.getCadrados()) {
 		    ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
-            System.out.println(cadrado.getCoordenadas());
-            System.out.println("cadrado xerado");
         }
         return fichaCadrado;
     }
