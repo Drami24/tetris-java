@@ -16,9 +16,7 @@ public class FichaCadrada extends Ficha {
     @Override
     public boolean moverDereita() {
         for (Cadrado cadrado : super.getCadrados()) {
-            System.out.println(cadrado.getCoordenadas());
             cadrado.setX(cadrado.getX() + Xogo.LADO_CADRADO);
-            System.out.println(cadrado.getCoordenadas());
         }
         System.out.println("Ficha movida a dereita");
         return true;
@@ -40,10 +38,10 @@ public class FichaCadrada extends Ficha {
     }
 
     private ArrayList<Cadrado> xerarCadrados() {
-        Cadrado cadrado0 = new Cadrado(Xogo.MAX_X / 2, 0, Color.BLUE);
-        Cadrado cadrado1 = new Cadrado(Xogo.MAX_X / 2, Xogo.LADO_CADRADO, Color.BLUE);
-        Cadrado cadrado2 = new Cadrado(Xogo.MAX_X / 2 - Xogo.LADO_CADRADO, 0, Color.BLUE);
-        Cadrado cadrado3 = new Cadrado(Xogo.MAX_X / 2 - Xogo.LADO_CADRADO, Xogo.LADO_CADRADO, Color.BLUE);
+        Cadrado cadrado0 = new Cadrado(Xogo.MAX_X / 2, 0, Color.BLUE, getXogo());
+        Cadrado cadrado1 = new Cadrado(Xogo.MAX_X / 2, Xogo.LADO_CADRADO, Color.BLUE, getXogo());
+        Cadrado cadrado2 = new Cadrado(Xogo.MAX_X / 2 - Xogo.LADO_CADRADO, 0, Color.BLUE, getXogo());
+        Cadrado cadrado3 = new Cadrado(Xogo.MAX_X / 2 - Xogo.LADO_CADRADO, Xogo.LADO_CADRADO, Color.BLUE, getXogo());
         ArrayList<Cadrado> cadrados = new ArrayList<>();
         cadrados.add(cadrado0);
         cadrados.add(cadrado1);

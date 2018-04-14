@@ -17,20 +17,27 @@ public class Xogo {
     private ArrayList<Cadrado> cadradosChan;
     private Ficha fichaActual;
 
+    public VentanaPrincipal getVentanaPrincipal() {
+        return ventanaPrincipal;
+    }
+
+    public void setVentanaPrincipal(VentanaPrincipal ventanaPrincipal) {
+        this.ventanaPrincipal = ventanaPrincipal;
+    }
+
     public Xogo (VentanaPrincipal ventanaPrincipal){
         this.ventanaPrincipal = ventanaPrincipal;
         fichaActual = xenerarNovaFicha();
     }
 
-    // FIXME: 14/04/2018 A ficha non se esta movendo a dereita
     public void moverFichaDereita() {
-        for (Cadrado cadrado : fichaActual.getCadrados()){
-            ventanaPrincipal.borrarCadrado(cadrado.getLblCadrado());
-        }
+     //   for (Cadrado cadrado : fichaActual.getCadrados()){
+     //       ventanaPrincipal.borrarCadrado(cadrado.getLblCadrado());
+     //   }
         fichaActual.moverDereita();
-        for (Cadrado cadrado : fichaActual.getCadrados()){
-            ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
-        }
+     //   for (Cadrado cadrado : fichaActual.getCadrados()){
+     //       ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
+     //   }
     }
     
     public void moverFichaEsquerda() {

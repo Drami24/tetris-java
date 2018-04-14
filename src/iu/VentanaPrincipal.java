@@ -24,8 +24,6 @@ public class VentanaPrincipal {
 	private JLabel lblNumlinas;
 	private Xogo xogoActual = null;
     JButton btnNovaPartida;
-	
-	JLabel nCadrado;
 
 	/**
 	 * Launch the application.
@@ -71,7 +69,8 @@ public class VentanaPrincipal {
 	}
 	
 	public void borrarCadrado(JLabel lblCadrado) {
-		
+		panelTetris.remove(lblCadrado);
+		panelTetris.repaint();
 	}
 
 	public void mostrarNumeroLinas(int numeroLinas){
@@ -115,7 +114,7 @@ public class VentanaPrincipal {
 				iniciarPartida();
 			}
 		});
-		btnNovaPartida.setBounds(62, 0, 100, 23);
+		btnNovaPartida.setBounds(62, 0, 150, 23);
 		return btnNovaPartida;
 	}
 
@@ -155,24 +154,5 @@ public class VentanaPrincipal {
         panelTetris.setLayout(null);
     }
 
-    public JLabel obterCadradoDeProba() {
-        nCadrado = new JLabel();
-        nCadrado.setBounds(0, 0, 30, 30);
-        nCadrado.setBackground(Color.BLUE);
-        nCadrado.setOpaque(true);
-        nCadrado.setVisible(true);
-        nCadrado.setBorder(new LineBorder(Color.BLACK, 2));
-        return nCadrado;
-    }
-
-    public void probaPintarCadrado() {
-        nCadrado = new JLabel();
-        nCadrado.setBounds(0, 0, 30, 30);
-        nCadrado.setBackground(Color.BLUE);
-        nCadrado.setOpaque(true);
-        nCadrado.setBorder(new LineBorder(Color.BLACK, 2));
-        pintarCadrado(nCadrado);
-        //panelTetris.add(nCadrado);
-    }
 }
 
