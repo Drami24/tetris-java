@@ -7,6 +7,23 @@ import java.awt.*;
 public class Cadrado{
 	
     private int x;
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
     private int y;
     private Color corRecheo;
     private JLabel lblCadrado;
@@ -24,7 +41,7 @@ public class Cadrado{
     }
 
     public String getCoordenadas() {
-        return String.valueOf(x) + String.valueOf(y);
+        return String.valueOf(x) + " " + String.valueOf(y);
     }
 
     public JLabel getLblCadrado(){
