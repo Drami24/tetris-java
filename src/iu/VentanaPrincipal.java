@@ -9,7 +9,6 @@ import javax.swing.Timer;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
-import modelo.Cadrado;
 import modelo.Xogo;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -24,6 +23,7 @@ public class VentanaPrincipal {
 	private JToggleButton tglbtnPausa;
 	private JLabel lblNumlinas;
 	private Xogo xogoActual = null;
+    JButton btnNovaPartida;
 	
 	JLabel nCadrado;
 
@@ -65,8 +65,9 @@ public class VentanaPrincipal {
 		xogoActual = new Xogo(this);
 	}
 	
-    public void pintarCadrado(JLabel lblCadrado, JPanel panelTetris) {
+    public void pintarCadrado(JLabel lblCadrado) {
 		panelTetris.add(lblCadrado);
+		panelTetris.repaint();
 	}
 	
 	public void borrarCadrado(JLabel lblCadrado) {
@@ -101,52 +102,55 @@ public class VentanaPrincipal {
 	}
 
 	private void asignarPropiedadesAVentana(JFrame frame){
-		frame.setBounds(100, 100, 450, 900);
+		frame.setBounds(100, 100, 400, 761);
 		frame.setTitle("Tetris by @damianld");
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
 	private JButton crearBotonNovaPartida(){
-		JButton btnNovaPartida = new JButton("Nova Partida");
+	    btnNovaPartida = new JButton("Nova Partida");
 		btnNovaPartida.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-                // FIXME: 14/04/2018 Non podemos pintar cadrado dende este contexto, necesita solucion
-                pintarCadrado(obterCadradoDeProba(), panelTetris);
 				iniciarPartida();
 			}
 		});
-		btnNovaPartida.setBounds(10, 11, 155, 23);
+		btnNovaPartida.setBounds(62, 0, 100, 23);
 		return btnNovaPartida;
 	}
 
 	private JToggleButton crearBotonPausa() {
         tglbtnPausa = new JToggleButton("Pausa");
-        tglbtnPausa.setBounds(303, 11, 121, 23);
+        tglbtnPausa.setBounds(223, 0, 100, 23);
 	    return tglbtnPausa;
     }
 
     private void crearBotonsControlXogo() {
         JButton btnEsquerda = new JButton("Esquerda");
-        btnEsquerda.setBounds(109, 769, 89, 23);
+        btnEsquerda.setBounds(73, 651, 89, 23);
         panelXogo.add(btnEsquerda);
 
         JButton btnDereita = new JButton("Dereita");
-        btnDereita.setBounds(220, 769, 89, 23);
+        btnDereita.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent arg0) {
+        		xogoActual.moverFichaDereita();
+        	}
+        });
+        btnDereita.setBounds(199, 651, 89, 23);
         panelXogo.add(btnDereita);
 
         JButton btnAbaixo = new JButton("Abaixo");
-        btnAbaixo.setBounds(109, 803, 89, 23);
+        btnAbaixo.setBounds(73, 685, 89, 23);
         panelXogo.add(btnAbaixo);
 
         JButton btnRotar = new JButton("Rotar");
-        btnRotar.setBounds(220, 803, 89, 23);
+        btnRotar.setBounds(199, 685, 89, 23);
         panelXogo.add(btnRotar);
     }
 
     private void engadirPanelTetris(){
         panelTetris = new JPanel();
-        panelTetris.setBounds(20, 47, 392, 696);
+        panelTetris.setBounds(41, 40, 300, 600);
         panelXogo.add(panelTetris);
         panelTetris.setLayout(null);
     }
@@ -156,6 +160,7 @@ public class VentanaPrincipal {
         nCadrado.setBounds(0, 0, 30, 30);
         nCadrado.setBackground(Color.BLUE);
         nCadrado.setOpaque(true);
+        nCadrado.setVisible(true);
         nCadrado.setBorder(new LineBorder(Color.BLACK, 2));
         return nCadrado;
     }
@@ -166,7 +171,7 @@ public class VentanaPrincipal {
         nCadrado.setBackground(Color.BLUE);
         nCadrado.setOpaque(true);
         nCadrado.setBorder(new LineBorder(Color.BLACK, 2));
-        //pintarCadrado(nCadrado);
+        pintarCadrado(nCadrado);
         //panelTetris.add(nCadrado);
     }
 }
