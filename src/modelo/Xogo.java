@@ -10,7 +10,7 @@ import javax.swing.*;
 public class Xogo {
     public final static int LADO_CADRADO = 30;
     public final static int MAX_X = 300;
-    public final static int MAX_Y = 900;
+    public final static int MAX_Y = 600;
     private boolean pausa;
     private int numeroLinas;
     private VentanaPrincipal ventanaPrincipal;
@@ -19,35 +19,37 @@ public class Xogo {
 
     public Xogo (VentanaPrincipal ventanaPrincipal){
         this.ventanaPrincipal = ventanaPrincipal;
-        this.xenerarNovaFicha();
+        fichaActual = xenerarNovaFicha();
     }
     
     public void moverFichaDereita() {
-    	// TODO
+        fichaActual.moverDereita();
     }
     
     public void moverFichaEsquerda() {
-    	// TODO
+    	fichaActual.moverEsquerda();
     }
     
     public void moverFichaAbaixo() {
-    	// TODO
+    	fichaActual.moverAbaixo();
     }
     
     public void rotarFicha() {
-    	
+    	fichaActual.rotar();
     }
     
     private void ePosicionValida(int x, int y) {
     	
     }
     
-    private void xenerarNovaFicha() {
+    private Ficha xenerarNovaFicha() {
 		FichaCadrada fichaCadrado = new FichaCadrada();
 		for (Cadrado cadrado : fichaCadrado.getCadrados()) {
-		    ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado(), new JPanel());
+		    ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
+            System.out.println(cadrado.getCoordenadas());
             System.out.println("cadrado xerado");
         }
+        return fichaCadrado;
     }
     
     private void engadirFichaAoChan() {
