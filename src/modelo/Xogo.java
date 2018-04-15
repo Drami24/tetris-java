@@ -55,6 +55,16 @@ public class Xogo {
     	    return true;
         }
     }
+
+    public Boolean ePosicionLimite(int x, int y) {
+        if (x  == MAX_X || x==0){
+            return false;
+        }else if (y == MAX_Y || y == 0){
+            return false;
+        } else {
+            return true;
+        }
+    }
     
     private Ficha xenerarNovaFicha() {
 		FichaCadrada fichaCadrado = new FichaCadrada();
