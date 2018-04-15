@@ -46,8 +46,14 @@ public class Xogo {
     	fichaActual.rotar();
     }
     
-    private void ePosicionValida(int x, int y) {
-    	
+    public Boolean ePosicionValida(int x, int y) {
+    	if (x  >= MAX_X || x<0){
+    	    return false;
+        }else if (y >= MAX_Y || y < 0){
+    	    return false;
+        } else {
+    	    return true;
+        }
     }
     
     private Ficha xenerarNovaFicha() {
