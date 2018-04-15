@@ -18,17 +18,22 @@ public class FichaCadrada extends Ficha {
         for (Cadrado cadrado : super.getCadrados()) {
             cadrado.setX(cadrado.getX() + Xogo.LADO_CADRADO);
         }
-        System.out.println("Ficha movida a dereita");
         return true;
     }
 
     @Override
     public boolean moverEsquerda() {
-        return false;
+        for (Cadrado cadrado : super.getCadrados()) {
+            cadrado.setX(cadrado.getX() - Xogo.LADO_CADRADO);
+        }
+        return true;
     }
 
     @Override
     public boolean moverAbaixo() {
+        for (Cadrado cadrado : super.getCadrados()) {
+            cadrado.setY(cadrado.getY() + Xogo.LADO_CADRADO);
+        }
         return false;
     }
 

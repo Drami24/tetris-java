@@ -31,13 +31,7 @@ public class Xogo {
     }
 
     public void moverFichaDereita() {
-     //   for (Cadrado cadrado : fichaActual.getCadrados()){
-     //       ventanaPrincipal.borrarCadrado(cadrado.getLblCadrado());
-     //   }
         fichaActual.moverDereita();
-     //   for (Cadrado cadrado : fichaActual.getCadrados()){
-     //       ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
-     //   }
     }
     
     public void moverFichaEsquerda() {

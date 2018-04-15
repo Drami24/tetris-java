@@ -59,7 +59,7 @@ public class VentanaPrincipal {
 	}
 
 	private void iniciarPartida(){
-        System.out.println("click");
+	    panelTetris.removeAll();
 		xogoActual = new Xogo(this);
 	}
 	
@@ -126,6 +126,11 @@ public class VentanaPrincipal {
 
     private void crearBotonsControlXogo() {
         JButton btnEsquerda = new JButton("Esquerda");
+        btnEsquerda.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                xogoActual.moverFichaEsquerda();
+            }
+        });
         btnEsquerda.setBounds(73, 651, 89, 23);
         panelXogo.add(btnEsquerda);
 
@@ -139,10 +144,19 @@ public class VentanaPrincipal {
         panelXogo.add(btnDereita);
 
         JButton btnAbaixo = new JButton("Abaixo");
+        btnAbaixo.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                xogoActual.moverFichaAbaixo();
+            }
+        });
         btnAbaixo.setBounds(73, 685, 89, 23);
         panelXogo.add(btnAbaixo);
 
         JButton btnRotar = new JButton("Rotar");
+        btnRotar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+            }
+        });
         btnRotar.setBounds(199, 685, 89, 23);
         panelXogo.add(btnRotar);
     }

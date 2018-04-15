@@ -46,20 +46,14 @@ public class Cadrado{
     	this.x = x;
     	this.y = y;
     	this.corRecheo = corRecheo;
-    	lblCadrado = new JLabel();
-    	lblCadrado.setBackground(corRecheo);
-    	lblCadrado.setBounds(x, y, Xogo.LADO_CADRADO, Xogo.LADO_CADRADO);
-    	lblCadrado.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
-    	lblCadrado.setVisible(true);
-    	lblCadrado.setOpaque(true);
-        xogo.getVentanaPrincipal().pintarCadrado(this.lblCadrado);
 
-    //	JLabel cadrado = new JLabel();
-    //	cadrado.setBounds(this.x, this.y, Xogo.LADO_CADRADO, Xogo.LADO_CADRADO);
-    //	cadrado.setBackground(corRecheo);
-    //	cadrado.setOpaque(true);
-    //	cadrado.setBorder(new LineBorder(Color.BLACK, 2));
-    //	this.lblCadrado = cadrado;
+
+    	JLabel cadrado = new JLabel();
+    	cadrado.setBounds(this.x, this.y, Xogo.LADO_CADRADO, Xogo.LADO_CADRADO);
+    	cadrado.setBackground(corRecheo);
+    	cadrado.setOpaque(true);
+    	cadrado.setBorder(new LineBorder(Color.BLACK, 2));
+    	this.lblCadrado = cadrado;
     }
 
     public String getCoordenadas() {
