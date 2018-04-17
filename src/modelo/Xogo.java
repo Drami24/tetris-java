@@ -17,6 +17,10 @@ public class Xogo {
     private ArrayList<Cadrado> cadradosChan;
     private Ficha fichaActual;
 
+    public Ficha getFichaActual() {
+        return fichaActual;
+    }
+
     public VentanaPrincipal getVentanaPrincipal() {
         return ventanaPrincipal;
     }
@@ -31,15 +35,22 @@ public class Xogo {
     }
 
     public void moverFichaDereita() {
-        fichaActual.moverDereita();
+        if(eMovementoValido(fichaActual.getCadrados(),LADO_CADRADO,0)) {
+            fichaActual.moverDereita();
+        }
     }
     
     public void moverFichaEsquerda() {
-    	fichaActual.moverEsquerda();
+        if(eMovementoValido(fichaActual.getCadrados(), -LADO_CADRADO, 0)){
+            fichaActual.moverEsquerda();
+        }
+
     }
     
     public void moverFichaAbaixo() {
-    	fichaActual.moverAbaixo();
+        if(eMovementoValido(fichaActual.getCadrados(),0, +LADO_CADRADO)){
+            fichaActual.moverAbaixo();
+        }
     }
     
     public void rotarFicha() {
@@ -47,7 +58,7 @@ public class Xogo {
     }
     
     public Boolean ePosicionValida(int x, int y) {
-    	if (x  >= MAX_X || x<0){
+    	if (x  >= MAX_X || x <0){
     	    return false;
         }else if (y >= MAX_Y || y < 0){
     	    return false;
@@ -57,12 +68,12 @@ public class Xogo {
     }
 
     public Boolean ePosicionLimite(int x, int y) {
-        if (x  == MAX_X || x==0){
-            return false;
-        }else if (y == MAX_Y || y == 0){
-            return false;
-        } else {
+        if (x  == MAX_X - LADO_CADRADO || x==0){
             return true;
+        }else if (y == MAX_Y - LADO_CADRADO){
+            return true;
+        } else {
+            return false;
         }
     }
     
@@ -88,5 +99,14 @@ public class Xogo {
     
     private boolean chocaFichaCoChan() {
     	return false;
+    }
+
+    private Boolean eMovementoValido(ArrayList<Cadrado> cadradosDeFicha, int sumaX, int sumaY) {
+        for (Cadrado cadrado : cadradosDeFicha) {
+            if (this.ePosicionLimite(cadrado.getX(), cadrado.getY())){
+                return false;
+            }
+        }
+        return true;
     }
 }

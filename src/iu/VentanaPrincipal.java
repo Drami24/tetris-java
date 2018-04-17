@@ -9,10 +9,12 @@ import javax.swing.Timer;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
+import modelo.Cadrado;
 import modelo.Xogo;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
 
 public class VentanaPrincipal {
 	
@@ -137,7 +139,7 @@ public class VentanaPrincipal {
         JButton btnDereita = new JButton("Dereita");
         btnDereita.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent arg0) {
-        		xogoActual.moverFichaDereita();
+                    xogoActual.moverFichaDereita();
         	}
         });
         btnDereita.setBounds(199, 651, 89, 23);
@@ -146,7 +148,7 @@ public class VentanaPrincipal {
         JButton btnAbaixo = new JButton("Abaixo");
         btnAbaixo.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                xogoActual.moverFichaAbaixo();
+                    xogoActual.moverFichaAbaixo();
             }
         });
         btnAbaixo.setBounds(73, 685, 89, 23);
@@ -167,6 +169,7 @@ public class VentanaPrincipal {
         panelXogo.add(panelTetris);
         panelTetris.setLayout(null);
     }
+
 
 }
 
