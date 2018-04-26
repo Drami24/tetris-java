@@ -15,6 +15,8 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class VentanaPrincipal {
 	
@@ -165,6 +167,27 @@ public class VentanaPrincipal {
 
     private void engadirPanelTetris(){
         panelTetris = new JPanel();
+        panelTetris.setFocusable(true);
+        panelTetris.addKeyListener(new KeyAdapter() {
+        	@Override
+        	public void keyPressed(KeyEvent e) {
+        		if (e.getKeyChar() == 'a') {
+        			System.out.println("hola");
+				}
+				if (e.getKeyChar() == 'b') {
+        			System.out.println("hola");
+
+				}
+				if (e.getKeyChar() == 'c') {
+        			System.out.println("hola");
+
+				}
+				if (e.getKeyChar() == 'd') {
+        			System.out.println("hola");
+
+				}
+        	}
+        });
         panelTetris.setBounds(41, 40, 300, 600);
         panelXogo.add(panelTetris);
         panelTetris.setLayout(null);
