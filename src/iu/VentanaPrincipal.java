@@ -87,6 +87,25 @@ public class VentanaPrincipal {
 
     private JPanel crearPanelXogo(){
 		panelXogo = new JPanel();
+		panelXogo.setFocusable(true);
+		panelXogo.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+					xogoActual.moverFichaEsquerda();
+				}
+				if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+					xogoActual.moverFichaDereita();
+				}
+				if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+					xogoActual.moverFichaAbaixo();
+				}
+				if (e.getKeyCode() == KeyEvent.VK_UP) {
+					xogoActual.rotarFicha();
+					System.out.println("arriba");
+				}
+			}
+		});
 		panelXogo.setBackground(Color.LIGHT_GRAY);
         panelXogo.setLayout(null);
         panelXogo.add(crearBotonNovaPartida());
@@ -119,6 +138,7 @@ public class VentanaPrincipal {
 			}
 		});
 		btnNovaPartida.setBounds(62, 0, 150, 23);
+		btnNovaPartida.setFocusable(false);
 		return btnNovaPartida;
 	}
 
@@ -167,27 +187,6 @@ public class VentanaPrincipal {
 
     private void engadirPanelTetris(){
         panelTetris = new JPanel();
-        panelTetris.setFocusable(true);
-        panelTetris.addKeyListener(new KeyAdapter() {
-        	@Override
-        	public void keyPressed(KeyEvent e) {
-        		if (e.getKeyChar() == 'a') {
-        			System.out.println("hola");
-				}
-				if (e.getKeyChar() == 'b') {
-        			System.out.println("hola");
-
-				}
-				if (e.getKeyChar() == 'c') {
-        			System.out.println("hola");
-
-				}
-				if (e.getKeyChar() == 'd') {
-        			System.out.println("hola");
-
-				}
-        	}
-        });
         panelTetris.setBounds(41, 40, 300, 600);
         panelXogo.add(panelTetris);
         panelTetris.setLayout(null);
