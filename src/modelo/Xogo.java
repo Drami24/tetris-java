@@ -14,7 +14,7 @@ public class Xogo {
     private boolean pausa;
     private int numeroLinas;
     private VentanaPrincipal ventanaPrincipal;
-    private ArrayList<Cadrado> cadradosChan;
+    private ArrayList<Cadrado> cadradosChan = new ArrayList<>();
     private Ficha fichaActual;
 
     public Ficha getFichaActual() {
@@ -50,6 +50,16 @@ public class Xogo {
     public void moverFichaAbaixo() {
         if(eMovementoValido(fichaActual.getCadrados(),0, +LADO_CADRADO)){
             fichaActual.moverAbaixo();
+            if(chocaFichaCoChan(fichaActual)){
+                System.out.println("A ficha chocou co chan");
+                unirFichaOChan(fichaActual);
+            }
+        }
+    }
+
+    private void unirFichaOChan(Ficha fichaActual) {
+        for (Cadrado cadrado : fichaActual.getCadrados()) {
+            cadradosChan.add(cadrado);
         }
     }
     
@@ -97,16 +107,26 @@ public class Xogo {
     	
     }
     
-    private boolean chocaFichaCoChan() {
-    	return false;
+    private boolean chocaFichaCoChan(Ficha fichaActual) {
+    	for(Cadrado cadrado : fichaActual.getCadrados()){
+    	    if (cadradoTocaOChan(cadrado))
+                 return true;
+        }
+        return false;
+    }
+
+    private boolean cadradoTocaOChan(Cadrado cadrado){
+        if(cadrado.getY() != MAX_Y - LADO_CADRADO){
+            return false;
+        } else {
+            return true;
+        }
     }
 
     private Boolean eMovementoValido(ArrayList<Cadrado> cadradosDeFicha, int movementoX, int movementoY) {
         for (Cadrado cadrado : cadradosDeFicha) {
             if (this.ePosicionLimite(cadrado.getX(), cadrado.getY())){
-                if (ePosicionValida(cadrado.getX()+movementoX, cadrado.getY()+movementoY) && cadrado.getY() != MAX_Y - LADO_CADRADO){
-                    return true;
-                } else {
+                if (!(ePosicionValida(cadrado.getX()+movementoX, cadrado.getY()+movementoY)) || cadradoTocaOChan(cadrado)){
                     return false;
                 }
             }
