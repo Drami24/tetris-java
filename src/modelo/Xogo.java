@@ -101,10 +101,14 @@ public class Xogo {
     	return false;
     }
 
-    private Boolean eMovementoValido(ArrayList<Cadrado> cadradosDeFicha, int sumaX, int sumaY) {
+    private Boolean eMovementoValido(ArrayList<Cadrado> cadradosDeFicha, int movementoX, int movementoY) {
         for (Cadrado cadrado : cadradosDeFicha) {
             if (this.ePosicionLimite(cadrado.getX(), cadrado.getY())){
-                return false;
+                if (ePosicionValida(cadrado.getX()+movementoX, cadrado.getY()+movementoY) && cadrado.getY() != MAX_Y - LADO_CADRADO){
+                    return true;
+                } else {
+                    return false;
+                }
             }
         }
         return true;
