@@ -49,10 +49,12 @@ public class Xogo {
     }
     
     public void moverFichaAbaixo() {
+    	int contador = 0;
+    	contador++;
         if(eMovementoValido(fichaActual.getCadrados(),0, +LADO_CADRADO)){
             fichaActual.moverAbaixo();
             if(chocaFichaCoChan(fichaActual)){
-                System.out.println("A ficha chocou co chan");
+                System.out.println("A ficha chocou co chan " + contador);
                 unirFichaOChan(fichaActual);
                 xenerarNovaFicha();
             }
@@ -118,8 +120,17 @@ public class Xogo {
         return false;
     }
 
+    private boolean proba(Cadrado cadrado) {
+    	 for (Cadrado cadradochan : cadradosChan) {
+             if (cadrado.getY() == cadradochan.getY() - LADO_CADRADO) {
+            	 return false;
+             }
+         }
+    	 return true;
+    }
+    
     private boolean cadradoTocaOChan(Cadrado cadrado){
-        if(cadrado.getY() != MAX_Y - LADO_CADRADO){
+        if( (cadrado.getY() != MAX_Y - LADO_CADRADO) && proba(cadrado) ){
             return false;
         } else {
             return true;
