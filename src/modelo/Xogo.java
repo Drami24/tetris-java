@@ -122,9 +122,9 @@ public class Xogo {
 
     private boolean colisionFigurasChan(Cadrado cadrado) {
     	 for (Cadrado cadradoChan : cadradosChan) {
-             if (cadrado.getY() == cadradoChan.getY() - LADO_CADRADO) {
+             if ( (cadrado.getY() == cadradoChan.getY() - LADO_CADRADO) && (cadrado.getX() == cadradoChan.getX())) {
             	 System.out.println("colision");
-//            	 return false;
+            	 return false;
              }
     		 
          }
