@@ -31,8 +31,9 @@ public class Xogo {
 
     public Xogo (VentanaPrincipal ventanaPrincipal){
         this.ventanaPrincipal = ventanaPrincipal;
-        fichaActual = xenerarNovaFicha();
+        xenerarNovaFicha();
     }
+
 
     public void moverFichaDereita() {
         if(eMovementoValido(fichaActual.getCadrados(),LADO_CADRADO,0)) {
@@ -53,6 +54,7 @@ public class Xogo {
             if(chocaFichaCoChan(fichaActual)){
                 System.out.println("A ficha chocou co chan");
                 unirFichaOChan(fichaActual);
+                xenerarNovaFicha();
             }
         }
     }
@@ -92,7 +94,8 @@ public class Xogo {
 		for (Cadrado cadrado : fichaCadrado.getCadrados()) {
 		    ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
         }
-        return fichaCadrado;
+        fichaActual = fichaCadrado;
+        return fichaActual;
     }
     
     private void engadirFichaAoChan() {
