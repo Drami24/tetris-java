@@ -120,17 +120,19 @@ public class Xogo {
         return false;
     }
 
-    private boolean proba(Cadrado cadrado) {
-    	 for (Cadrado cadradochan : cadradosChan) {
-             if (cadrado.getY() == cadradochan.getY() - LADO_CADRADO) {
-            	 return false;
+    private boolean colisionFigurasChan(Cadrado cadrado) {
+    	 for (Cadrado cadradoChan : cadradosChan) {
+             if (cadrado.getY() == cadradoChan.getY() - LADO_CADRADO) {
+            	 System.out.println("colision");
+//            	 return false;
              }
+    		 
          }
     	 return true;
     }
     
     private boolean cadradoTocaOChan(Cadrado cadrado){
-        if( (cadrado.getY() != MAX_Y - LADO_CADRADO) && proba(cadrado) ){
+        if( (cadrado.getY() != MAX_Y - LADO_CADRADO) && colisionFigurasChan(cadrado) ){
             return false;
         } else {
             return true;
