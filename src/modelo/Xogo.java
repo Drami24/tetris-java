@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 import iu.VentanaPrincipal;
 import tiposficha.FichaCadrada;
+import tiposficha.FichaI;
+import tiposficha.FichaJ;
+import tiposficha.FichaL;
+import tiposficha.FichaS;
 
 import javax.swing.*;
 
@@ -101,11 +105,37 @@ public class Xogo {
     }
     
     private Ficha xenerarNovaFicha() {
-		FichaCadrada fichaCadrado = new FichaCadrada();
-		for (Cadrado cadrado : fichaCadrado.getCadrados()) {
+//		FichaCadrada fichaCadrado = new FichaCadrada();
+//		for (Cadrado cadrado : fichaCadrado.getCadrados()) {
+//		    ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
+//        }
+//        fichaActual = fichaCadrado;
+//        return fichaActual;
+
+//        FichaL fichaL = new FichaL();
+//		for (Cadrado cadrado : fichaL.getCadrados()) {
+//		    ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
+//        }
+//        fichaActual = fichaL;
+//        return fichaActual;
+
+//        FichaJ fichaJ = new FichaJ();
+//		for (Cadrado cadrado : fichaJ.getCadrados()) {
+//		    ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
+//        }
+//        fichaActual = fichaJ;
+//        return fichaActual;
+//    	FichaI fichaI = new FichaI();
+//		for (Cadrado cadrado : fichaI.getCadrados()) {
+//		    ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
+//        }
+//        fichaActual = fichaI;
+//        return fichaActual;
+    	FichaS fichaS = new FichaS();
+		for (Cadrado cadrado : fichaS.getCadrados()) {
 		    ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
         }
-        fichaActual = fichaCadrado;
+        fichaActual = fichaS;
         return fichaActual;
     }
     
@@ -138,7 +168,7 @@ public class Xogo {
             	 System.out.println("colision");
             	 return true;
              }
-    		 
+
          }
     	 return false;
     }
