@@ -38,26 +38,35 @@ public class Xogo {
     public void moverFichaDereita() {
         if(eMovementoValido(fichaActual.getCadrados(),LADO_CADRADO,0)) {
             fichaActual.moverDereita();
+            comprobarMovementoFicha();
         }
     }
     
     public void moverFichaEsquerda() {
         if(eMovementoValido(fichaActual.getCadrados(), -LADO_CADRADO, 0)){
             fichaActual.moverEsquerda();
+            comprobarMovementoFicha();
         }
 
     }
     
     public void moverFichaAbaixo() {
-    	int contador = 0;
-    	contador++;
         if(eMovementoValido(fichaActual.getCadrados(),0, +LADO_CADRADO)){
             fichaActual.moverAbaixo();
-            if(chocaFichaCoChan(fichaActual)){
-                System.out.println("A ficha chocou co chan " + contador);
-                unirFichaOChan(fichaActual);
-                xenerarNovaFicha();
-            }
+            comprobarMovementoFicha();
+        }
+    }
+
+    private void xerarFiguraFicticia(Cadrado movementoX, Cadrado movementoY) {
+        Ficha fichaClon = fichaActual;
+
+    }
+
+    private void comprobarMovementoFicha(){
+        if(chocaFichaCoChan(fichaActual)){
+            System.out.println("A ficha chocou co chan");
+            unirFichaOChan(fichaActual);
+            xenerarNovaFicha();
         }
     }
 
@@ -120,19 +129,23 @@ public class Xogo {
         return false;
     }
 
-    private boolean colisionFigurasChan(Cadrado cadrado) {
+    private boolean colisionaFigura(Cadrado cadrado) {
     	 for (Cadrado cadradoChan : cadradosChan) {
-             if ( (cadrado.getY() == cadradoChan.getY() - LADO_CADRADO) && (cadrado.getX() == cadradoChan.getX())) {
+    	     boolean ladoIgualLimiteVertical = cadrado.getY() == cadradoChan.getY() - LADO_CADRADO;
+    	     boolean ladoIgualLimiteHorizontalEsquerdo = cadrado.getX() == cadradoChan.getX() - LADO_CADRADO;
+             boolean ladoIgualLimiteHorizontalDereito = cadrado.getX() == cadradoChan.getX() + LADO_CADRADO*2;
+             if ( ladoIgualLimiteVertical && (ladoIgualLimiteHorizontalDereito || ladoIgualLimiteHorizontalEsquerdo)) {
             	 System.out.println("colision");
-            	 return false;
+            	 return true;
              }
     		 
          }
-    	 return true;
+    	 return false;
     }
     
     private boolean cadradoTocaOChan(Cadrado cadrado){
-        if( (cadrado.getY() != MAX_Y - LADO_CADRADO) && colisionFigurasChan(cadrado) ){
+        boolean cadradoTocaSuelo = cadrado.getY() != MAX_Y - LADO_CADRADO;
+        if( cadradoTocaSuelo && !colisionaFigura(cadrado) ){
             return false;
         } else {
             return true;
