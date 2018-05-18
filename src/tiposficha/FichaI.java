@@ -48,10 +48,10 @@ public class FichaI extends Ficha {
 		int ladoEsquerdo = Xogo.MAX_X / 2 - Xogo.LADO_CADRADO *2;
 		int ladoArriba = 0;
         ArrayList<Cadrado> cadrados = new ArrayList<>();
-        Cadrado cadrado0 = new Cadrado(ladoEsquerdo, ladoArriba, Color.CYAN, getXogo());
-        Cadrado cadrado1 = new Cadrado(ladoDereito, ladoArriba, Color.CYAN, getXogo());
-        Cadrado cadrado2 = new Cadrado(ladoDereito + Xogo.LADO_CADRADO, ladoArriba, Color.CYAN, getXogo());
-        Cadrado cadrado3 = new Cadrado(ladoDereito + Xogo.LADO_CADRADO*2, ladoArriba, Color.CYAN, getXogo());
+        Cadrado cadrado0 = new Cadrado(ladoEsquerdo, ladoArriba, Color.CYAN);
+        Cadrado cadrado1 = new Cadrado(ladoDereito, ladoArriba, Color.CYAN);
+        Cadrado cadrado2 = new Cadrado(ladoDereito + Xogo.LADO_CADRADO, ladoArriba, Color.CYAN);
+        Cadrado cadrado3 = new Cadrado(ladoDereito + Xogo.LADO_CADRADO*2, ladoArriba, Color.CYAN);
         cadrados.add(cadrado0);
         cadrados.add(cadrado1);
         cadrados.add(cadrado2);

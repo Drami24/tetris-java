@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="795c8197-9763-4215-860e-6871979a504e" name="Default" comment="Varios cambios, optimizando código, repintar ao iniciar partida">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="795c8197-9763-4215-860e-6871979a504e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iu/VentanaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iu/VentanaPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/Cadrado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Cadrado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modelo/Xogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Xogo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tiposficha/FichaCadrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiposficha/FichaCadrada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiposficha/FichaI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiposficha/FichaI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiposficha/FichaJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiposficha/FichaJ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiposficha/FichaL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiposficha/FichaL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tiposficha/FichaS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiposficha/FichaS.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,70 +21,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VentanaPrincipal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iu/VentanaPrincipal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="154" column="27" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
-              <folding>
-                <element signature="e#3340#3341#0" expanded="true" />
-                <element signature="e#3403#3404#0" expanded="true" />
-                <element signature="e#3670#3671#0" expanded="true" />
-                <element signature="e#3733#3734#0" expanded="true" />
-                <element signature="e#3999#4000#0" expanded="true" />
-                <element signature="e#4064#4065#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cadrado.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/modelo/Cadrado.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="30" column="27" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#281#282#0" expanded="true" />
-                <element signature="e#305#306#0" expanded="true" />
-                <element signature="e#491#492#0" expanded="true" />
-                <element signature="e#515#516#0" expanded="true" />
-                <element signature="e#711#712#0" expanded="true" />
-                <element signature="e#743#744#0" expanded="true" />
-                <element signature="e#1459#1460#0" expanded="true" />
-                <element signature="e#1492#1493#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Xogo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Xogo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modelo/Xogo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="56" column="25" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="25" />
+            <state relative-caret-position="192">
+              <caret line="110" column="37" lean-forward="true" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
               <folding>
-                <element signature="e#493#494#0" expanded="true" />
-                <element signature="e#527#528#0" expanded="true" />
-                <element signature="e#1459#1460#0" expanded="true" />
-                <element signature="e#1491#1492#0" expanded="true" />
-                <element signature="e#2443#2444#0" expanded="true" />
-                <element signature="e#2468#2469#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ficha.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/modelo/Ficha.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-              <folding>
-                <element signature="e#296#297#0" expanded="true" />
-                <element signature="e#336#337#0" expanded="true" />
-                <element signature="e#365#366#0" expanded="true" />
-                <element signature="e#392#393#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,12 +36,48 @@
       <file leaf-file-name="FichaCadrada.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tiposficha/FichaCadrada.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+            <state relative-caret-position="544">
+              <caret line="49" column="104" selection-start-line="49" selection-start-column="104" selection-end-line="49" selection-end-column="104" />
               <folding>
                 <element signature="e#203#204#0" expanded="true" />
                 <element signature="e#253#254#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FichaI.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tiposficha/FichaI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="701">
+              <caret line="51" column="75" selection-start-line="51" selection-start-column="75" selection-end-line="51" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FichaJ.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tiposficha/FichaJ.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="701">
+              <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FichaL.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tiposficha/FichaL.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="701">
+              <caret line="54" column="96" selection-start-line="54" selection-start-column="96" selection-end-line="54" selection-end-column="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FichaS.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tiposficha/FichaS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -114,10 +96,18 @@
       <find>cuadrado</find>
       <find>lblCadrado</find>
       <find>null</find>
-      <find>xogo</find>
       <find>repain</find>
       <find>epo</find>
       <find>remove</find>
+      <find>choca</find>
+      <find>xogoActual</find>
+      <find>cadradosCha</find>
+      <find>cadradosChan</find>
+      <find>movi</find>
+      <find>moverAbaixo</find>
+      <find>cadrado.set</find>
+      <find>xogo</find>
+      <find>borra</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -132,26 +122,29 @@
         <option value="$PROJECT_DIR$/src/xogo/Cadrado.java" />
         <option value="$PROJECT_DIR$/src/xogo/VentanaPrincipal.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/iu/VentanaPrincipal.java" />
         <option value="$PROJECT_DIR$/src/modelo/Ficha.java" />
         <option value="$PROJECT_DIR$/src/modelo/Cadrado.java" />
+        <option value="$PROJECT_DIR$/src/tiposficha/FichaJ.java" />
         <option value="$PROJECT_DIR$/src/tiposficha/FichaCadrada.java" />
-        <option value="$PROJECT_DIR$/src/iu/VentanaPrincipal.java" />
+        <option value="$PROJECT_DIR$/src/tiposficha/FichaL.java" />
+        <option value="$PROJECT_DIR$/src/tiposficha/FichaI.java" />
+        <option value="$PROJECT_DIR$/src/tiposficha/FichaS.java" />
         <option value="$PROJECT_DIR$/src/modelo/Xogo.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="475" />
-    <option name="y" value="-3" />
-    <option name="width" value="1387" />
-    <option name="height" value="951" />
+    <option name="x" value="228" />
+    <option name="y" value="-10" />
+    <option name="width" value="1112" />
+    <option name="height" value="1100" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,16 +157,35 @@
               <item name="tetris-java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tetris-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tetris-java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="iu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tetris-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tetris-java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="modelo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tetris-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tetris-java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tiposficha" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="G:/3 ava/BDCombo" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
@@ -323,27 +335,70 @@
       <option name="project" value="LOCAL" />
       <updated>1523830146976</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="ultimos cambios">
+      <created>1523974764256</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1523974764256</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Arreglado movemento limite da ficha">
+      <created>1525984611860</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1525984611860</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fundido das fichas co chan">
+      <created>1525987408325</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1525987408325</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Xerar nova ficha cando a fichaActual choca co chan">
+      <created>1526043951875</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1526043951875</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Probas colisions">
+      <created>1526417810467</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1526417810467</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="2" />
-      <window_info anchor="bottom" id="TODO" order="4" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49707174" weight="0.3286385" />
+      <window_info anchor="bottom" id="TODO" order="4" weight="0.32917705" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49707174" weight="0.3275862" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.51537335" side_tool="true" weight="0.2112676" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.51599145" side_tool="true" weight="0.25754312" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4897511" weight="0.37245697" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48462665" weight="0.28448275" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4897511" weight="0.19827586" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48400852" visible="true" weight="0.16594827" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32917705" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1130064" />
       <window_info id="Learn" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -406,49 +461,32 @@
     <MESSAGE value="Varios cambios, optimizando código, repintar ao iniciar partida" />
     <MESSAGE value="Metodo encargado de comprobar se a posicion dun cadrado e valida" />
     <MESSAGE value="Creado metodo e posicion limite" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creado metodo e posicion limite" />
+    <MESSAGE value="ultimos cambios" />
+    <MESSAGE value="Arreglado movemento limite da ficha" />
+    <MESSAGE value="Fundido das fichas co chan" />
+    <MESSAGE value="Xerar nova ficha cando a fichaActual choca co chan" />
+    <MESSAGE value="Probas colisions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Probas colisions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/modelo/Xogo.java</url>
-          <line>71</line>
-          <properties />
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/modelo/Xogo.java</url>
-          <line>73</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/modelo/Xogo.java</url>
-          <line>75</line>
-          <properties />
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="24" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="40" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/xogo/Xogo.java" />
-    <entry file="file://$PROJECT_DIR$/src/xogo/Cadrado.java" />
-    <entry file="file://$PROJECT_DIR$/src/xogo/Ficha.java" />
-    <entry file="file://$PROJECT_DIR$/src/xogo/TiposFicha/FichaCadrada.java" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/modelo/Xogo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1141">
-          <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+        <state relative-caret-position="2472">
+          <caret line="103" column="7" lean-forward="true" selection-start-line="103" selection-start-column="7" selection-end-line="103" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/xogo/VentanaPrincipal.java" />
-    <entry file="file://$PROJECT_DIR$/src/xogo/VentanaPrincipal.java" />
-    <entry file="file://$PROJECT_DIR$/src/xogo/Xogo.java" />
-    <entry file="file://$PROJECT_DIR$/src/xogo/Cadrado.java" />
     <entry file="file://$PROJECT_DIR$/src/xogo/Ficha.java" />
     <entry file="file://$PROJECT_DIR$/src/xogo/TiposFicha/FichaCadrada.java" />
     <entry file="file://$PROJECT_DIR$/src/xogo/Xogo.java" />
@@ -510,25 +548,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/xogo/VentanaPrincipal.java" />
     <entry file="file://$PROJECT_DIR$/tetris-java.iml" />
-    <entry file="file://$PROJECT_DIR$/src/iu/VentanaPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="154" column="27" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
-          <folding>
-            <element signature="e#3340#3341#0" expanded="true" />
-            <element signature="e#3403#3404#0" expanded="true" />
-            <element signature="e#3670#3671#0" expanded="true" />
-            <element signature="e#3733#3734#0" expanded="true" />
-            <element signature="e#3999#4000#0" expanded="true" />
-            <element signature="e#4064#4065#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/7zOC5C690A5/Cadrado.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/7zOC5CF3A54/Xogo.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/7zOC5C20C54/VentanaPrincipal.java" />
     <entry file="file://$PROJECT_DIR$/src/modelo/Cadrado.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="27" />
+        <state relative-caret-position="274">
+          <caret line="44" column="48" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#281#282#0" expanded="true" />
@@ -543,10 +569,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/Tetris-master/Tetris/src/modelo/Xogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2064">
+          <caret line="88" column="19" lean-forward="true" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/modelo/Ficha.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="168">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#296#297#0" expanded="true" />
             <element signature="e#336#337#0" expanded="true" />
@@ -556,10 +589,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/iu/VentanaPrincipal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/Xogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="110" column="37" lean-forward="true" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/tiposficha/FichaCadrada.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+        <state relative-caret-position="544">
+          <caret line="49" column="104" selection-start-line="49" selection-start-column="104" selection-end-line="49" selection-end-column="104" />
           <folding>
             <element signature="e#203#204#0" expanded="true" />
             <element signature="e#253#254#0" expanded="true" />
@@ -567,18 +617,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/Xogo.java">
+    <entry file="file://$PROJECT_DIR$/src/tiposficha/FichaJ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="56" column="25" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="25" />
-          <folding>
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#1459#1460#0" expanded="true" />
-            <element signature="e#1491#1492#0" expanded="true" />
-            <element signature="e#2443#2444#0" expanded="true" />
-            <element signature="e#2468#2469#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="701">
+          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tiposficha/FichaL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="54" column="96" selection-start-line="54" selection-start-column="96" selection-end-line="54" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tiposficha/FichaS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tiposficha/FichaI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="51" column="75" selection-start-line="51" selection-start-column="75" selection-end-line="51" selection-end-column="75" />
         </state>
       </provider>
     </entry>

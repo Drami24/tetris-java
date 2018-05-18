@@ -42,7 +42,7 @@ public class Cadrado{
         lblCadrado.repaint();
     }
 
-    public Cadrado(int x, int y, Color corRecheo, Xogo xogo) {
+    public Cadrado(int x, int y, Color corRecheo) {
     	this.x = x;
     	this.y = y;
     	this.corRecheo = corRecheo;

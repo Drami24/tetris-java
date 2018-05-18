@@ -49,10 +49,10 @@ public class FichaJ extends Ficha {
 		int ladoArriba = 0;
 		int ladoAbaixo = Xogo.LADO_CADRADO;
         ArrayList<Cadrado> cadrados = new ArrayList<>();
-        Cadrado cadrado0 = new Cadrado(ladoEsquerdo, ladoArriba, Color.BLUE, getXogo());
-        Cadrado cadrado1 = new Cadrado(ladoDereito, ladoArriba, Color.BLUE, getXogo());
-        Cadrado cadrado2 = new Cadrado(ladoDereito + Xogo.LADO_CADRADO, ladoArriba, Color.BLUE, getXogo());
-        Cadrado cadrado3 = new Cadrado(ladoDereito + Xogo.LADO_CADRADO, ladoAbaixo, Color.BLUE, getXogo());
+        Cadrado cadrado0 = new Cadrado(ladoEsquerdo, ladoArriba, Color.BLUE);
+        Cadrado cadrado1 = new Cadrado(ladoDereito, ladoArriba, Color.BLUE);
+        Cadrado cadrado2 = new Cadrado(ladoDereito + Xogo.LADO_CADRADO, ladoArriba, Color.BLUE);
+        Cadrado cadrado3 = new Cadrado(ladoDereito + Xogo.LADO_CADRADO, ladoAbaixo, Color.BLUE);
         cadrados.add(cadrado0);
         cadrados.add(cadrado1);
         cadrados.add(cadrado2);

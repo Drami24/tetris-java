@@ -44,10 +44,10 @@ public class FichaCadrada extends Ficha {
 
     private ArrayList<Cadrado> xerarCadrados() {
         ArrayList<Cadrado> cadrados = new ArrayList<>();
-        Cadrado cadrado0 = new Cadrado(Xogo.MAX_X / 2, 0, Color.BLUE, getXogo());
-        Cadrado cadrado1 = new Cadrado(Xogo.MAX_X / 2, Xogo.LADO_CADRADO, Color.BLUE, getXogo());
-        Cadrado cadrado2 = new Cadrado(Xogo.MAX_X / 2 - Xogo.LADO_CADRADO, 0, Color.BLUE, getXogo());
-        Cadrado cadrado3 = new Cadrado(Xogo.MAX_X / 2 - Xogo.LADO_CADRADO, Xogo.LADO_CADRADO, Color.BLUE, getXogo());
+        Cadrado cadrado0 = new Cadrado(Xogo.MAX_X / 2, 0, Color.BLUE);
+        Cadrado cadrado1 = new Cadrado(Xogo.MAX_X / 2, Xogo.LADO_CADRADO, Color.BLUE);
+        Cadrado cadrado2 = new Cadrado(Xogo.MAX_X / 2 - Xogo.LADO_CADRADO, 0, Color.BLUE);
+        Cadrado cadrado3 = new Cadrado(Xogo.MAX_X / 2 - Xogo.LADO_CADRADO, Xogo.LADO_CADRADO, Color.BLUE);
         cadrados.add(cadrado0);
         cadrados.add(cadrado1);
         cadrados.add(cadrado2);
