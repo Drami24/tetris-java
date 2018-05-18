@@ -5,11 +5,7 @@ import java.util.Collection;
 import java.util.Random;
 
 import iu.VentanaPrincipal;
-import tiposficha.FichaCadrada;
-import tiposficha.FichaI;
-import tiposficha.FichaJ;
-import tiposficha.FichaL;
-import tiposficha.FichaS;
+import tiposficha.*;
 
 import javax.swing.*;
 
@@ -185,7 +181,7 @@ public class Xogo {
     
     private Ficha xenerarNovaFicha() {
         Random r = new Random();
-        int fichaAleatoria = r.nextInt((5)+1);
+        int fichaAleatoria = r.nextInt((7)+1);
         switch (fichaAleatoria) {
             case 1:
                 fichaActual = new FichaCadrada();
@@ -201,6 +197,12 @@ public class Xogo {
                 break;
             case 5:
                 fichaActual = new FichaS();
+                break;
+            case 6:
+                fichaActual = new FichaT();
+                break;
+            case 7:
+                fichaActual = new FichaZ();
                 break;
         }
         return debuxarNovaFicha(fichaActual);
