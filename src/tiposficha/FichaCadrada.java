@@ -43,8 +43,8 @@ public class FichaCadrada extends Ficha {
     }
 
     private ArrayList<Cadrado> xerarCadrados() {
-        int ladoDereito = Xogo.MAX_X / 2 - Xogo.LADO_CADRADO;
-        int ladoEsquerdo = Xogo.MAX_X / 2 - Xogo.LADO_CADRADO *2;
+        int ladoDereito = Xogo.MAX_X / 2;
+        int ladoEsquerdo = Xogo.MAX_X / 2 - Xogo.LADO_CADRADO;
         int ladoArriba = 0;
         int ladoAbaixo = Xogo.LADO_CADRADO;
         ArrayList<Cadrado> cadrados = new ArrayList<>();
