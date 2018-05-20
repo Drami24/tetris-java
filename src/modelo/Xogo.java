@@ -1,13 +1,10 @@
 package modelo;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Random;
 
 import iu.VentanaPrincipal;
 import tiposficha.*;
-
-import javax.swing.*;
 
 public class Xogo {
     public final static int LADO_CADRADO = 30;

@@ -86,7 +86,7 @@ public class VentanaPrincipal {
 		crearBotonsControlXogo();
 		engadirPanelTetris();
 	}
-	
+
 	/**
 	 * Este método encárgase de iniciar a partida do Tetris
 	 */
@@ -113,6 +113,32 @@ public class VentanaPrincipal {
 
 	}
 
+	private JPanel engadirContentPane(JFrame frame) {
+		JPanel contentPane = new JPanel();
+		contentPane.setBackground(Color.LIGHT_GRAY);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		frame.setContentPane(contentPane);
+		return contentPane;
+	}
+
+	/**
+	 * Establece as propiedades do frame
+	 * 
+	 * @param frame
+	 *            no cal asignamos as propiedades
+	 */
+	private void asignarPropiedadesDoFrame(JFrame frame) {
+		frame.setBounds(900, 0, 400, 740);
+		frame.setTitle("Tetris by @damianld");
+		frame.setResizable(false);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
 	private JPanel crearPanelXogo() {
 		panelXogo = new JPanel();
 		panelXogo.setFocusable(true);
@@ -140,22 +166,6 @@ public class VentanaPrincipal {
 		panelXogo.add(crearBotonPausa());
 		panelXogo.setVisible(true);
 		return panelXogo;
-	}
-
-	private JPanel engadirContentPane(JFrame frame) {
-		JPanel contentPane = new JPanel();
-		contentPane.setBackground(Color.LIGHT_GRAY);
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
-		frame.setContentPane(contentPane);
-		return contentPane;
-	}
-
-	private void asignarPropiedadesDoFrame(JFrame frame) {
-		frame.setBounds(900, 0, 400, 740);
-		frame.setTitle("Tetris by @damianld");
-		frame.setResizable(false);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 	private JButton crearBotonNovaPartida() {
