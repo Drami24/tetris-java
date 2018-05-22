@@ -178,27 +178,27 @@ public class Xogo {
     
     private Ficha xenerarNovaFicha() {
         Random r = new Random();
-        int fichaAleatoria = r.nextInt((7)+1);
+        int fichaAleatoria = r.nextInt(7);
         switch (fichaAleatoria) {
-            case 1:
+            case 0:
                 fichaActual = new FichaCadrada();
                 break;
-            case 2:
+            case 1:
                 fichaActual = new FichaL();
                 break;
-            case 3:
+            case 2:
                 fichaActual = new FichaJ();
                 break;
-            case 4:
+            case 3:
                 fichaActual = new FichaI();
                 break;
-            case 5:
+            case 4:
                 fichaActual = new FichaS();
                 break;
-            case 6:
+            case 5:
                 fichaActual = new FichaT();
                 break;
-            case 7:
+            case 6:
                 fichaActual = new FichaZ();
                 break;
         }
@@ -212,13 +212,13 @@ public class Xogo {
     private void borrarLinasCompletas() {
         for(int y = 0; y<MAX_Y; y += LADO_CADRADO) {
             for (int x = 0; x<MAX_X; x += LADO_CADRADO ){
-                int contadorCadradosLiña = 0;
+                int contadorCadradosLista = 0;
                 for (Cadrado cadrado : cadradosChan){
                     if (cadrado.getY() == y && cadrado.getX() == x){
-                        contadorCadradosLiña++;
+                        contadorCadradosLista++;
                     }
                 }
-                if(contadorCadradosLiña == x/LADO_CADRADO){
+                if(contadorCadradosLista == x/LADO_CADRADO){
                     borrarLina(y);
                 }
             }
