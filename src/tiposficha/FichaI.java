@@ -10,8 +10,8 @@ import modelo.Ficha;
 import modelo.Xogo;
 
 public class FichaI extends Ficha {
-	private int ladoDereito = Xogo.MAX_X / 2 - Xogo.LADO_CADRADO;
-	private int ladoEsquerdo = Xogo.MAX_X / 2 - Xogo.LADO_CADRADO * 2;
+	private int ladoDereito = Xogo.MAX_X / 2;
+	private int ladoEsquerdo = Xogo.MAX_X / 2 - Xogo.LADO_CADRADO;
 	private int ladoArriba = 0;
 	private int ladoAbaixo = Xogo.LADO_CADRADO;
 	byte posicion = 0;
@@ -49,8 +49,8 @@ public class FichaI extends Ficha {
 		if (posicion == 0) {
 			for (int i = 0; i < super.getCadrados().size(); i++) {
 				if (i == 0) {
-					super.getCadrados().get(i).setX(ladoDereito);
-					super.getCadrados().get(i).setY(ladoArriba);
+					int cadrado0 = super.getCadrados().get(i).getX();
+					super.getCadrados().get(i).setX(cadrado0);
 				} else if (i == 1) {
 					super.getCadrados().get(i).setX(ladoDereito);
 					super.getCadrados().get(i).setY(ladoAbaixo);
@@ -88,10 +88,10 @@ public class FichaI extends Ficha {
 
 	private ArrayList<Cadrado> xerarCadrados() {
 		ArrayList<Cadrado> cadrados = new ArrayList<>();
-		Cadrado cadrado0 = new Cadrado(ladoEsquerdo, ladoArriba, Color.CYAN);
-		Cadrado cadrado1 = new Cadrado(ladoDereito, ladoArriba, Color.CYAN);
-		Cadrado cadrado2 = new Cadrado(ladoDereito + Xogo.LADO_CADRADO, ladoArriba, Color.CYAN);
-		Cadrado cadrado3 = new Cadrado(ladoDereito + Xogo.LADO_CADRADO * 2, ladoArriba, Color.CYAN);
+		Cadrado cadrado0 = new Cadrado(ladoEsquerdo - Xogo.LADO_CADRADO, ladoArriba, Color.CYAN);
+		Cadrado cadrado1 = new Cadrado(ladoEsquerdo, ladoArriba, Color.CYAN);
+		Cadrado cadrado2 = new Cadrado(ladoDereito, ladoArriba, Color.CYAN);
+		Cadrado cadrado3 = new Cadrado(ladoDereito + Xogo.LADO_CADRADO, ladoArriba, Color.CYAN);
 		cadrados.add(cadrado0);
 		cadrados.add(cadrado1);
 		cadrados.add(cadrado2);
