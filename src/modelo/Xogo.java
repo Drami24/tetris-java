@@ -175,13 +175,26 @@ public class Xogo {
         fichaActual = ficha;
         return ficha;
     }
-    
+
+    private int repetido(int numeroFicha) {
+        int numero
+        return 0;
+    }
+
     private Ficha xenerarNovaFicha() {
+     //   int figuraFicha;
+
         Random r = new Random();
         int fichaAleatoria = r.nextInt(7);
+
+     /*   if (fichaAleatoria == comprobarRepeticion) {
+            System.out.println("repetido");
+        }*/
+
         switch (fichaAleatoria) {
             case 0:
                 fichaActual = new FichaCadrada();
+
                 break;
             case 1:
                 fichaActual = new FichaL();

@@ -8,6 +8,8 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class FichaZ extends Ficha {
+    private boolean rotacion = true;
+
     public FichaZ() {
         super.setCadrados(xerarCadrados());
     }
@@ -38,7 +40,33 @@ public class FichaZ extends Ficha {
 
     @Override
     public boolean rotar() {
-        // TODO Auto-generated method stub
+        if (rotacion) {
+            for (int i = 0; i < getCadrados().size(); i++) {
+                if (i == 0) {
+                    int cadrado0X = getCadrados().get(i).getX();
+                    getCadrados().get(i).setX(cadrado0X + Xogo.LADO_CADRADO * 2);
+                    int cadrado0Y = getCadrados().get(i).getY();
+                    getCadrados().get(i).setY(cadrado0Y - Xogo.LADO_CADRADO);
+                } else if (i == 3) {
+                    int cadrado3X = getCadrados().get(i).getY();
+                    getCadrados().get(i).setY(cadrado3X - Xogo.LADO_CADRADO);
+                }
+            }
+            rotacion = false;
+        } else {
+            for (int i = 0; i < getCadrados().size(); i++) {
+                if (i == 0) {
+                    int cadrado0X = getCadrados().get(i).getX();
+                    getCadrados().get(i).setX(cadrado0X - Xogo.LADO_CADRADO * 2);
+                    int cadrado0Y = getCadrados().get(i).getY();
+                    getCadrados().get(i).setY(cadrado0Y + Xogo.LADO_CADRADO);
+                } else if (i == 3) {
+                    int cadrado3X = getCadrados().get(i).getY();
+                    getCadrados().get(i).setY(cadrado3X + Xogo.LADO_CADRADO);
+                }
+            }
+            rotacion = true;
+        }
         return false;
     }
 
