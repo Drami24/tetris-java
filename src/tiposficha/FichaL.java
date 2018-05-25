@@ -98,11 +98,14 @@ public class FichaL extends Ficha {
                     int cadrado3X = getCadrados().get(i).getX();
                     getCadrados().get(i).setX(cadrado3X - Xogo.LADO_CADRADO);
                     int cadrado3Y = getCadrados().get(i).getY();
-                    getCadrados().get(i).setY(cadrado3Y + Xogo.LADO_CADRADO);
+                    getCadrados().get(i).setY(cadrado3Y + Xogo.LADO_CADRADO*2);
                 } else if (i == 1) {
                 	int cadrado3X = getCadrados().get(i).getX();
                     getCadrados().get(i).setX(cadrado3X - Xogo.LADO_CADRADO);
                 } else if (i == 2) {
+                	int cadrado3Y = getCadrados().get(i).getY();
+                    getCadrados().get(i).setY(cadrado3Y - Xogo.LADO_CADRADO);
+                } else if (i == 3) {
                 	int cadrado3Y = getCadrados().get(i).getY();
                     getCadrados().get(i).setY(cadrado3Y - Xogo.LADO_CADRADO);
                 }
