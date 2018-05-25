@@ -177,7 +177,7 @@ public class Xogo {
     }
 
     private int repetido(int numeroFicha) {
-        int numero
+        int numero;
         return 0;
     }
 
