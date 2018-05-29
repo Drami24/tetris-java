@@ -1,6 +1,7 @@
 package modelo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 import iu.VentanaPrincipal;
@@ -115,8 +116,8 @@ public class Xogo {
 
     public void finalFicha(){
         unirFichaOChan(fichaActual);
-     //   borrarLinasCompletas();
         xenerarNovaFicha();
+        borrarLinasCompletas();
     }
 
     /**
@@ -224,36 +225,48 @@ public class Xogo {
     
     private void borrarLinasCompletas() {
         for(int y = 0; y<MAX_Y; y += LADO_CADRADO) {
-            for (int x = 0; x<MAX_X; x += LADO_CADRADO ){
-                int contadorCadradosLista = 0;
-                for (Cadrado cadrado : cadradosChan){
-                    if (cadrado.getY() == y && cadrado.getX() == x){
-                        contadorCadradosLista++;
-                    }
-                }
-                if(contadorCadradosLista == x/LADO_CADRADO){
-                    borrarLina(y);
+            if(estaLinhaCompleta(y)){
+                borrarLina(y);
+            }
+        }
+    }
+
+    private boolean estaLinhaCompleta(int cordenadaY){
+        int contadorCadradosFila = 0;
+        for (int x = 0; x<MAX_X; x += LADO_CADRADO ){
+            for (Cadrado cadrado : cadradosChan){
+                if (cadrado.getY() == cordenadaY && cadrado.getX() == x){
+                    contadorCadradosFila++;
                 }
             }
+        }
+        if(contadorCadradosFila == MAX_X/LADO_CADRADO){
+            return true;
+        } else {
+            return false;
         }
     }
 
 
     
     private void borrarLina(int y) {
-        for (Cadrado cadrado : cadradosChan){
+        int cadradosBorrados = 0;
+        ArrayList<Cadrado> cadradosBufer = new ArrayList<>();
+        cadradosBufer.addAll(cadradosChan);
+        for (Cadrado cadrado : cadradosBufer){
             if (cadrado.getY() == y){
                 cadradosChan.remove(cadrado);
+                System.out.println(cadradosBorrados++);
                 ventanaPrincipal.borrarCadrado(cadrado.getLblCadrado());
             }
         }
         baixarCadradosChan(y);
     }
 
-    private void baixarCadradosChan(int y){
-        for(Cadrado cadrado : cadradosChan){
-            if (cadrado.getY() > y){
-                cadrado.setY(y+LADO_CADRADO);
+    private void baixarCadradosChan(int y) {
+        for (Cadrado cadrado : cadradosChan) {
+            if (cadrado.getY() < y) {
+                cadrado.setY(cadrado.getY() + LADO_CADRADO);
             }
         }
     }
