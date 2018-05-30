@@ -1,11 +1,12 @@
 package modelo;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Random;
 
 import iu.VentanaPrincipal;
 import tiposficha.*;
+
+import javax.swing.*;
 
 public class Xogo {
     public final static int LADO_CADRADO = 30;
@@ -60,6 +61,7 @@ public class Xogo {
         if(fichaEPosicionValida(cadradosFantasma,movementoY)){
             fichaActual.moverAbaixo();
         }
+
     }
 
     public void rotarFicha() {
@@ -115,9 +117,13 @@ public class Xogo {
     }
 
     public void finalFicha(){
-        unirFichaOChan(fichaActual);
-        xenerarNovaFicha();
-        borrarLinasCompletas();
+        if (chegouFichaArriba()){
+            gameOver();
+        }else {
+            unirFichaOChan(fichaActual);
+            xenerarNovaFicha();
+            borrarLinasCompletas();
+        }
     }
 
     /**
@@ -290,6 +296,19 @@ public class Xogo {
 
     private boolean tocaOchan(int y){
         return y >= MAX_Y ;
+    }
+
+    private void gameOver(){
+        JOptionPane.showMessageDialog(null, "HA PERDIDO, inténtelo de nuevo.");
+    }
+
+    private boolean chegouFichaArriba(){
+        for (Cadrado cadrado : fichaActual.getCadrados()) {
+            if(cadrado.getY() == 0){
+                return true;
+            }
+        }
+        return false;
     }
 
 }
