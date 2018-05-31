@@ -1,5 +1,7 @@
 package modelo;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -12,19 +14,19 @@ public class Xogo {
     public final static int LADO_CADRADO = 30;
     public final static int MAX_X = 300;
     public final static int MAX_Y = 600;
-    private int FICHA_CADRADA = 0;
-
     private boolean pausa;
     private int numeroLinas = 0;
+    private int nivelDificultade = 0;
     private VentanaPrincipal ventanaPrincipal;
     private ArrayList<Cadrado> cadradosChan = new ArrayList<>();
     private Ficha fichaActual;
-    
-    public int getNumeroLinas() {
-		return numeroLinas;
-	}
+    private Timer timerXogo;
 
-	public Ficha getFichaActual() {
+    public int getNumeroLinas() {
+        return numeroLinas;
+    }
+
+    public Ficha getFichaActual() {
         return fichaActual;
     }
 
@@ -38,7 +40,29 @@ public class Xogo {
 
     public Xogo(VentanaPrincipal ventanaPrincipal) {
         this.ventanaPrincipal = ventanaPrincipal;
+        ActionListener eventoTimer = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                moverFichaAbaixo();
+            }
+        };
+        timerXogo = new Timer(1000, eventoTimer);
+        timerXogo.setInitialDelay(1000);
+        timerXogo.setRepeats(true);
+        timerXogo.start();
         xenerarNovaFicha();
+    }
+
+    private void subirDificultade() {
+        if (timerXogo.getDelay() >= 150) {
+            nivelDificultade++;
+            ventanaPrincipal.mostrarDificultade(nivelDificultade);
+            timerXogo.setDelay(timerXogo.getDelay() - 100);
+        }
+    }
+
+    public int getNivelDificultade() {
+        return nivelDificultade;
     }
 
     public void moverFichaDereita() {
@@ -267,6 +291,10 @@ public class Xogo {
             }
         }
         numeroLinas++;
+        ventanaPrincipal.mostrarNumeroLinas(numeroLinas);
+        if (numeroLinas % 5 == 0) {
+            subirDificultade();
+        }
         baixarCadradosChan(y);
     }
 
@@ -300,6 +328,7 @@ public class Xogo {
     }
 
     private void gameOver() {
+        timerXogo.stop();
         JOptionPane.showMessageDialog(null, "HA PERDIDO, inténtelo de nuevo.");
     }
 

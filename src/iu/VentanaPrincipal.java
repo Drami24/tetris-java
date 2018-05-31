@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.JToggleButton;
 import javax.swing.Timer;
 import javax.swing.border.EmptyBorder;
+
 import modelo.Xogo;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -21,6 +22,8 @@ import java.awt.event.KeyEvent;
  *
  */
 public class VentanaPrincipal {
+
+    private JLabel lblDificultade;
 
 	/**
 	 * Contedor dos compoñentes da interfaz gráfica
@@ -38,6 +41,7 @@ public class VentanaPrincipal {
 	 * Encárgase de baixar automáticamente as fichas do Tetris
 	 */
 	private Timer timer;
+
 	/**
 	 * Botón que permite pausar a partida
 	 */
@@ -95,6 +99,10 @@ public class VentanaPrincipal {
 		xogoActual = new Xogo(this);
 	}
 
+	public void setTimer(Timer timer){
+	    this.timer = timer;
+    }
+
 	public void pintarCadrado(JLabel lblCadrado) {
 		panelTetris.add(lblCadrado);
 		panelTetris.repaint();
@@ -105,13 +113,40 @@ public class VentanaPrincipal {
 		panelTetris.repaint();
 	}
 
-	public void mostrarNumeroLinas(int numeroLinas) {
-		xogoActual.getNumeroLinas();
-		System.out.println(xogoActual.getNumeroLinas());
+	public void mostrarNumeroLinas(int numeroLinas){
+	    if (lblNumlinas != null) {
+            panelXogo.remove(lblNumlinas);
+        }
+	    panelXogo.add(crearLabelNumLinas(numeroLinas));
+        panelXogo.repaint();
+    }
+
+    public void mostrarDificultade(int dificultade){
+        if (lblDificultade != null) {
+            panelXogo.remove(lblDificultade);
+        }
+        panelXogo.add(crearLabelDificultade(dificultade));
+        panelXogo.repaint();
+    }
+
+	private JLabel crearLabelNumLinas(int numeroLinas) {
+		lblNumlinas = new JLabel("Liñas eliminadas " + numeroLinas);
+		lblNumlinas.setForeground(Color.WHITE);
+		lblNumlinas.setFont(new Font("Verdana", Font.PLAIN, 14));
+		lblNumlinas.setBounds(324, 107, 150, 14);
+		return lblNumlinas;
 	}
 
+    private JLabel crearLabelDificultade(int dificultade) {
+        lblDificultade = new JLabel("Nivel " + dificultade);
+        lblDificultade.setForeground(Color.WHITE);
+        lblDificultade.setFont(new Font("Verdana", Font.PLAIN, 14));
+        lblDificultade.setBounds(324, 127, 150, 14);
+        return lblDificultade;
+    }
+	
 	public void mostrarFinDoXogo() {
-
+        
 	}
 
 	private JPanel engadirContentPane(JFrame frame) {
@@ -147,6 +182,8 @@ public class VentanaPrincipal {
 		panelXogo.setBackground(Color.GRAY);
 		panelXogo.add(crearBotonNovaPartida());
 		panelXogo.add(crearBotonPausa());
+		mostrarNumeroLinas(0);
+		mostrarDificultade(0);
 		panelXogo.setVisible(true);
 		return panelXogo;
 	}
@@ -176,11 +213,6 @@ public class VentanaPrincipal {
 		tglbtnPausa.setBounds(324, 47, 150, 23);
 		tglbtnPausa.setFocusable(false);
 		return tglbtnPausa;
-	}
-
-	private JLabel crearLabelNumLinas() {
-//		lblNumlinas =  
-		return null;
 	}
 	
 	private void crearBotonsControlXogo() {
@@ -245,12 +277,6 @@ public class VentanaPrincipal {
 		panelTetris.setFocusable(true);
 		panelXogo.add(panelTetris);
 		panelTetris.setLayout(null);
-		
-		lblNumlinas = new JLabel("Liñas eliminadas ");
-		lblNumlinas.setForeground(Color.WHITE);
-		lblNumlinas.setFont(new Font("Verdana", Font.PLAIN, 14));
-		lblNumlinas.setBounds(324, 107, 150, 14);
-		panelXogo.add(lblNumlinas);
 	}
 	
 }
