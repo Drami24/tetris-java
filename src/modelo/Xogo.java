@@ -15,12 +15,16 @@ public class Xogo {
     private int FICHA_CADRADA = 0;
 
     private boolean pausa;
-    private int numeroLinas;
+    private int numeroLinas = 0;
     private VentanaPrincipal ventanaPrincipal;
     private ArrayList<Cadrado> cadradosChan = new ArrayList<>();
     private Ficha fichaActual;
+    
+    public int getNumeroLinas() {
+		return numeroLinas;
+	}
 
-    public Ficha getFichaActual() {
+	public Ficha getFichaActual() {
         return fichaActual;
     }
 
@@ -36,7 +40,6 @@ public class Xogo {
         this.ventanaPrincipal = ventanaPrincipal;
         xenerarNovaFicha();
     }
-
 
     public void moverFichaDereita() {
         int movementoY = 0;
@@ -187,11 +190,6 @@ public class Xogo {
         return ficha;
     }
 
-    private int repetido(int numeroFicha) {
-        int numero;
-        return 0;
-    }
-
     private Ficha xenerarNovaFicha() {
         //   int figuraFicha;
 
@@ -205,7 +203,6 @@ public class Xogo {
         switch (fichaAleatoria) {
             case 0:
                 fichaActual = new FichaCadrada();
-
                 break;
             case 1:
                 fichaActual = new FichaL();
@@ -269,6 +266,7 @@ public class Xogo {
                 ventanaPrincipal.borrarCadrado(cadrado.getLblCadrado());
             }
         }
+        numeroLinas++;
         baixarCadradosChan(y);
     }
 
@@ -296,7 +294,6 @@ public class Xogo {
         }
         return false;
     }
-
 
     private boolean tocaOchan(int y) {
         return y >= MAX_Y;

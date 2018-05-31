@@ -106,7 +106,8 @@ public class VentanaPrincipal {
 	}
 
 	public void mostrarNumeroLinas(int numeroLinas) {
-
+		xogoActual.getNumeroLinas();
+		System.out.println(xogoActual.getNumeroLinas());
 	}
 
 	public void mostrarFinDoXogo() {
@@ -177,6 +178,11 @@ public class VentanaPrincipal {
 		return tglbtnPausa;
 	}
 
+	private JLabel crearLabelNumLinas() {
+//		lblNumlinas =  
+		return null;
+	}
+	
 	private void crearBotonsControlXogo() {
 		JButton btnEsquerda = new JButton("Esquerda");
 		btnEsquerda.addActionListener(new ActionListener() {
@@ -239,6 +245,12 @@ public class VentanaPrincipal {
 		panelTetris.setFocusable(true);
 		panelXogo.add(panelTetris);
 		panelTetris.setLayout(null);
+		
+		lblNumlinas = new JLabel("Liñas eliminadas ");
+		lblNumlinas.setForeground(Color.WHITE);
+		lblNumlinas.setFont(new Font("Verdana", Font.PLAIN, 14));
+		lblNumlinas.setBounds(324, 107, 150, 14);
+		panelXogo.add(lblNumlinas);
 	}
-
+	
 }
