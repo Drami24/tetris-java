@@ -38,6 +38,7 @@ public abstract class Ficha {
         }
         return false;
     }
+
     public abstract boolean rotar();
 
 }

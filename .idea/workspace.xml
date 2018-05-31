@@ -4,17 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/src/modelo/Xogo.java" line="259" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="795c8197-9763-4215-860e-6871979a504e" name="Default" comment="Engadida a funcionalidade de eliminar filas">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/Cadrado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Cadrado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Ficha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiposficha/FichaCadrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiposficha/FichaCadrada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiposficha/FichaI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiposficha/FichaI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiposficha/FichaJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiposficha/FichaJ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiposficha/FichaL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiposficha/FichaL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiposficha/FichaS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiposficha/FichaS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiposficha/FichaT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiposficha/FichaT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tiposficha/FichaZ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiposficha/FichaZ.java" afterDir="false" />
+    <list default="true" id="795c8197-9763-4215-860e-6871979a504e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/modelo/Xogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Xogo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,32 +17,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Ficha.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Ficha.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modelo/Ficha.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="24" />
+            <state relative-caret-position="336">
+              <caret line="20" column="10" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cadrado.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/modelo/Cadrado.java">
+      <file leaf-file-name="Xogo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/modelo/Xogo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="63" column="1" lean-forward="true" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+            <state relative-caret-position="5570">
+              <caret line="309" column="9" lean-forward="true" selection-start-line="309" selection-start-column="9" selection-end-line="309" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#242#243#0" expanded="true" />
-                <element signature="e#266#267#0" expanded="true" />
-                <element signature="e#452#453#0" expanded="true" />
-                <element signature="e#476#477#0" expanded="true" />
-                <element signature="e#676#677#0" expanded="true" />
-                <element signature="e#708#709#0" expanded="true" />
-                <element signature="e#912#913#0" expanded="true" />
-                <element signature="e#978#979#0" expanded="true" />
-                <element signature="e#1014#1015#0" expanded="true" />
-                <element signature="e#1047#1048#0" expanded="true" />
+                <element signature="e#563#564#0" expanded="true" />
+                <element signature="e#597#598#0" expanded="true" />
+                <element signature="e#650#651#0" expanded="true" />
+                <element signature="e#689#690#0" expanded="true" />
+                <element signature="e#763#764#0" expanded="true" />
+                <element signature="e#819#820#0" expanded="true" />
+                <element signature="e#1816#1817#0" expanded="true" />
+                <element signature="e#1851#1852#0" expanded="true" />
+                <element signature="e#8698#8699#0" expanded="true" />
+                <element signature="e#8732#8733#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,7 +72,6 @@
       <find>movi</find>
       <find>moverAbaixo</find>
       <find>cadrado.set</find>
-      <find>xogo</find>
       <find>borra</find>
       <find>borrarLinasCompletas</find>
       <find>tocaOchan</find>
@@ -92,6 +82,7 @@
       <find>rotacion</find>
       <find>getcor</find>
       <find>setcorre</find>
+      <find>xogo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,8 +98,6 @@
         <option value="$PROJECT_DIR$/src/xogo/VentanaPrincipal.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/iu/VentanaPrincipal.java" />
-        <option value="$PROJECT_DIR$/src/modelo/Xogo.java" />
-        <option value="$PROJECT_DIR$/src/modelo/Ficha.java" />
         <option value="$PROJECT_DIR$/src/tiposficha/FichaCadrada.java" />
         <option value="$PROJECT_DIR$/src/tiposficha/FichaI.java" />
         <option value="$PROJECT_DIR$/src/tiposficha/FichaT.java" />
@@ -117,14 +106,16 @@
         <option value="$PROJECT_DIR$/src/tiposficha/FichaS.java" />
         <option value="$PROJECT_DIR$/src/tiposficha/FichaZ.java" />
         <option value="$PROJECT_DIR$/src/modelo/Cadrado.java" />
+        <option value="$PROJECT_DIR$/src/modelo/Xogo.java" />
+        <option value="$PROJECT_DIR$/src/modelo/Ficha.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="81" />
-    <option name="y" value="-13" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="52" />
+    <option name="y" value="10" />
+    <option name="width" value="1797" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -398,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527710910565</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Refactorizar rotacións de fichas">
+      <created>1527728368657</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1527728368657</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -411,25 +409,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="52" y="10" width="1797" height="1032" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="2" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.32917705" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49707174" weight="0.3275862" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" sideWeight="0.49707174" visible="true" weight="0.32662192" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.51759064" side_tool="true" weight="0.16594827" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5181237" side_tool="true" weight="0.094827585" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4824094" visible="true" weight="0.094827585" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48187634" weight="0.098434" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4897511" weight="0.19827586" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32917705" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49285713" visible="true" weight="0.12153518" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5797342" visible="true" weight="0.1312608" />
       <window_info id="Learn" order="6" />
-      <window_info id="Structure" order="1" sideWeight="0.50714284" side_tool="true" visible="true" weight="0.12153518" />
+      <window_info id="Structure" order="1" sideWeight="0.4202658" side_tool="true" visible="true" weight="0.1312608" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="5" />
       <window_info anchor="right" id="Theme Preview" order="5" />
@@ -500,7 +498,8 @@
     <MESSAGE value="Rotacións engadidas en varias fichas" />
     <MESSAGE value="Engadida a funcionalidade de eliminar filas" />
     <MESSAGE value="Implementar método fin do xogo chamado GamerOver" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementar método fin do xogo chamado GamerOver" />
+    <MESSAGE value="Refactorizar rotacións de fichas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactorizar rotacións de fichas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -580,13 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iu/VentanaPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/Component.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147624">
@@ -594,10 +586,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modelo/Xogo.java">
+    <entry file="file://$PROJECT_DIR$/src/iu/VentanaPrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6587">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="1021">
+          <caret line="86" column="29" lean-forward="true" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -629,7 +621,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tiposficha/FichaJ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
+        <state relative-caret-position="733">
           <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -651,7 +643,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tiposficha/FichaS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
+        <state relative-caret-position="1296">
           <caret line="56" column="1" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -671,35 +663,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tiposficha/FichaZ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
+        <state relative-caret-position="1200">
           <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modelo/Cadrado.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="63" column="1" lean-forward="true" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+        <state relative-caret-position="288">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#978#979#0" expanded="true" />
-            <element signature="e#1014#1015#0" expanded="true" />
-            <element signature="e#1047#1048#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modelo/Ficha.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="24" />
+        <state relative-caret-position="336">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/Xogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5570">
+          <caret line="309" column="9" lean-forward="true" selection-start-line="309" selection-start-column="9" selection-end-line="309" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#1816#1817#0" expanded="true" />
+            <element signature="e#1851#1852#0" expanded="true" />
+            <element signature="e#8698#8699#0" expanded="true" />
+            <element signature="e#8732#8733#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -32,7 +32,7 @@ public class Xogo {
         this.ventanaPrincipal = ventanaPrincipal;
     }
 
-    public Xogo (VentanaPrincipal ventanaPrincipal){
+    public Xogo(VentanaPrincipal ventanaPrincipal) {
         this.ventanaPrincipal = ventanaPrincipal;
         xenerarNovaFicha();
     }
@@ -41,24 +41,24 @@ public class Xogo {
     public void moverFichaDereita() {
         int movementoY = 0;
         int movementoX = LADO_CADRADO;
-        if(fichaEPosicionValida(xerarCadradosFantasma(movementoX,movementoY), movementoY)){
+        if (fichaEPosicionValida(xerarCadradosFantasma(movementoX, movementoY), movementoY)) {
             fichaActual.moverDereita();
         }
     }
-    
+
     public void moverFichaEsquerda() {
         int movementoY = 0;
         int movementoX = -LADO_CADRADO;
-        if(fichaEPosicionValida(xerarCadradosFantasma(movementoX,movementoY),movementoY)){
+        if (fichaEPosicionValida(xerarCadradosFantasma(movementoX, movementoY), movementoY)) {
             fichaActual.moverEsquerda();
         }
     }
-    
+
     public void moverFichaAbaixo() {
         int movementoY = LADO_CADRADO;
         int movementoX = 0;
-        ArrayList<Cadrado> cadradosFantasma = xerarCadradosFantasma(movementoX,movementoY);
-        if(fichaEPosicionValida(cadradosFantasma,movementoY)){
+        ArrayList<Cadrado> cadradosFantasma = xerarCadradosFantasma(movementoX, movementoY);
+        if (fichaEPosicionValida(cadradosFantasma, movementoY)) {
             fichaActual.moverAbaixo();
         }
 
@@ -69,11 +69,11 @@ public class Xogo {
     }
 
     private ArrayList<Cadrado> xerarCadradosFantasma(int movementoX, int movementoY) {
-        ArrayList <Cadrado> cadradosFantasma = new ArrayList<>();
-        for (Cadrado cadrado : fichaActual.getCadrados()){
+        ArrayList<Cadrado> cadradosFantasma = new ArrayList<>();
+        for (Cadrado cadrado : fichaActual.getCadrados()) {
             Cadrado copiaCadrado = copiarCadrado(cadrado);
-            copiaCadrado.setY(cadrado.getY()+movementoY);
-            copiaCadrado.setX(cadrado.getX()+movementoX);
+            copiaCadrado.setY(cadrado.getY() + movementoY);
+            copiaCadrado.setX(cadrado.getX() + movementoX);
             //ventanaPrincipal.pintarCadrado(copiaCadrado.getLblCadrado());
             cadradosFantasma.add(copiaCadrado);
         }
@@ -81,7 +81,7 @@ public class Xogo {
         return cadradosFantasma;
     }
 
-    private Cadrado copiarCadrado (Cadrado cadradoACopiar){
+    private Cadrado copiarCadrado(Cadrado cadradoACopiar) {
         Cadrado copiaCadrado = new Cadrado(cadradoACopiar.getX(), cadradoACopiar.getY(), cadradoACopiar.getCorRecheo());
         return copiaCadrado;
     }
@@ -93,33 +93,34 @@ public class Xogo {
     }
 
     /**
-     *  Comproba se unhas cordenadas de altura e anchura teñen unha posicion valida
+     * Comproba se unhas cordenadas de altura e anchura teñen unha posicion valida
+     *
      * @param x Posicion no eixe horizontal
      * @param y Posicion no eixe vertical
      * @return Resposta de se o elemento se atopa nun lugar valido
      */
     public Boolean ePosicionValida(int x, int y, int movementoY) {
-        if(!estaFora(x,y)){
-            if(!tocaOchan(y)){
-                if(colisiona(x, y)){
-                    if(movementoY == LADO_CADRADO){
+        if (!estaFora(x, y)) {
+            if (!tocaOchan(y)) {
+                if (colisiona(x, y)) {
+                    if (movementoY == LADO_CADRADO) {
                         finalFicha();
                         return false;
                     }
-                }else {
+                } else {
                     return true;
                 }
-            }else {
+            } else {
                 finalFicha();
             }
         }
         return false;
     }
 
-    public void finalFicha(){
-        if (chegouFichaArriba()){
+    public void finalFicha() {
+        if (chegouFichaArriba()) {
             gameOver();
-        }else {
+        } else {
             unirFichaOChan(fichaActual);
             xenerarNovaFicha();
             borrarLinasCompletas();
@@ -128,33 +129,35 @@ public class Xogo {
 
     /**
      * Comproba se unhas cordenadas son unha posicion que esta dentro do xogo
+     *
      * @param x Cordenada horizontal
      * @param y Cordenada vertical
      * @return Dinos se o lugar indicado se atopa dentro do xogo
      */
-    public Boolean estaFora (int x, int y) {
-        if (x + LADO_CADRADO > MAX_X || x < 0){
+    public Boolean estaFora(int x, int y) {
+        if (x + LADO_CADRADO > MAX_X || x < 0) {
             System.out.println("Esta fora");
-            System.out.println(x +" "+ y);
+            System.out.println(x + " " + y);
             return true;
-        }else if (y > MAX_Y){
+        } else if (y > MAX_Y) {
             System.out.println("Esta fora y max");
-            System.out.println(x +" "+ y);
+            System.out.println(x + " " + y);
             return true;
         } else {
             System.out.println("Non esta fora");
-            System.out.println(x +" "+ y);
+            System.out.println(x + " " + y);
             return false;
         }
     }
 
     /**
      * Comproba que a posicion de un cadrado e valida
+     *
      * @param cadrado Cadrado sobre o que se comproba a posicion
-     * @return  Resposta de se o cadrado ten unha posicion valida
+     * @return Resposta de se o cadrado ten unha posicion valida
      */
-    public boolean cadradoEPosicionValida(Cadrado cadrado,int movementoY){
-        if(ePosicionValida(cadrado.getX(), cadrado.getY(),movementoY)) {
+    public boolean cadradoEPosicionValida(Cadrado cadrado, int movementoY) {
+        if (ePosicionValida(cadrado.getX(), cadrado.getY(), movementoY)) {
             return true;
         } else {
             return false;
@@ -163,11 +166,12 @@ public class Xogo {
 
     /**
      * Comproba se un array de cadrados teñen unha posicion valida
+     *
      * @param cadradosFicha Cadrados a comprobar
      * @return A resposta de se a posicion e valida
      */
-    public boolean fichaEPosicionValida (ArrayList <Cadrado> cadradosFicha, int movementoY) {
-        for(Cadrado cadrado : cadradosFicha){
+    public boolean fichaEPosicionValida(ArrayList<Cadrado> cadradosFicha, int movementoY) {
+        for (Cadrado cadrado : cadradosFicha) {
             if (!cadradoEPosicionValida(cadrado, movementoY)) {
                 return false;
             }
@@ -175,7 +179,7 @@ public class Xogo {
         return true;
     }
 
-    private Ficha debuxarNovaFicha(Ficha ficha){
+    private Ficha debuxarNovaFicha(Ficha ficha) {
         for (Cadrado cadrado : ficha.getCadrados()) {
             ventanaPrincipal.pintarCadrado(cadrado.getLblCadrado());
         }
@@ -189,7 +193,7 @@ public class Xogo {
     }
 
     private Ficha xenerarNovaFicha() {
-     //   int figuraFicha;
+        //   int figuraFicha;
 
         Random r = new Random();
         int fichaAleatoria = r.nextInt(7);
@@ -224,29 +228,29 @@ public class Xogo {
         }
         return debuxarNovaFicha(fichaActual);
     }
-    
+
     private void engadirFichaAoChan() {
-    	
+
     }
-    
+
     private void borrarLinasCompletas() {
-        for(int y = 0; y<MAX_Y; y += LADO_CADRADO) {
-            if(estaLinhaCompleta(y)){
+        for (int y = 0; y < MAX_Y; y += LADO_CADRADO) {
+            if (estaLinhaCompleta(y)) {
                 borrarLina(y);
             }
         }
     }
 
-    private boolean estaLinhaCompleta(int cordenadaY){
+    private boolean estaLinhaCompleta(int cordenadaY) {
         int contadorCadradosFila = 0;
-        for (int x = 0; x<MAX_X; x += LADO_CADRADO ){
-            for (Cadrado cadrado : cadradosChan){
-                if (cadrado.getY() == cordenadaY && cadrado.getX() == x){
+        for (int x = 0; x < MAX_X; x += LADO_CADRADO) {
+            for (Cadrado cadrado : cadradosChan) {
+                if (cadrado.getY() == cordenadaY && cadrado.getX() == x) {
                     contadorCadradosFila++;
                 }
             }
         }
-        if(contadorCadradosFila == MAX_X/LADO_CADRADO){
+        if (contadorCadradosFila == MAX_X / LADO_CADRADO) {
             return true;
         } else {
             return false;
@@ -254,13 +258,12 @@ public class Xogo {
     }
 
 
-    
     private void borrarLina(int y) {
         int cadradosBorrados = 0;
         ArrayList<Cadrado> cadradosBufer = new ArrayList<>();
         cadradosBufer.addAll(cadradosChan);
-        for (Cadrado cadrado : cadradosBufer){
-            if (cadrado.getY() == y){
+        for (Cadrado cadrado : cadradosBufer) {
+            if (cadrado.getY() == y) {
                 cadradosChan.remove(cadrado);
                 System.out.println(cadradosBorrados++);
                 ventanaPrincipal.borrarCadrado(cadrado.getLblCadrado());
@@ -280,31 +283,32 @@ public class Xogo {
 
     /**
      * Comproba se unhas coordenadas coinciden con coordenadas de un cadro bloqueado
+     *
      * @param x Posicion eixe horizontal
      * @param y Posicion eixe vertical
-     * @return  Dinos se o obxeto colisiona ou non
+     * @return Dinos se o obxeto colisiona ou non
      */
     private boolean colisiona(int x, int y) {
-    	 for (Cadrado cadradoChan : cadradosChan) {
-    	     if(x == cadradoChan.getX() && y==cadradoChan.getY()){
-    	         return true;
-             }
-         }
-    	 return false;
+        for (Cadrado cadradoChan : cadradosChan) {
+            if (x == cadradoChan.getX() && y == cadradoChan.getY()) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
-    private boolean tocaOchan(int y){
-        return y >= MAX_Y ;
+    private boolean tocaOchan(int y) {
+        return y >= MAX_Y;
     }
 
-    private void gameOver(){
+    private void gameOver() {
         JOptionPane.showMessageDialog(null, "HA PERDIDO, inténtelo de nuevo.");
     }
 
-    private boolean chegouFichaArriba(){
+    private boolean chegouFichaArriba() {
         for (Cadrado cadrado : fichaActual.getCadrados()) {
-            if(cadrado.getY() == 0){
+            if (cadrado.getY() == 0) {
                 return true;
             }
         }
