@@ -8,64 +8,32 @@ import modelo.Ficha;
 import modelo.Xogo;
 
 public class FichaS extends Ficha {
-    private boolean rotacion = true;
+    private Cadrado cadrado0;
+    private Cadrado cadrado1;
+    private Cadrado cadrado2;
+    private Cadrado cadrado3;
+    private boolean posicionRotacion = false;
 
     public FichaS() {
         super.setCadrados(xerarCadrados());
     }
 
     @Override
-    public boolean moverDereita() {
-        for (Cadrado cadrado : super.getCadrados()) {
-            cadrado.setX(cadrado.getX() + Xogo.LADO_CADRADO);
-        }
-        return true;
-    }
-
-    @Override
-    public boolean moverEsquerda() {
-        for (Cadrado cadrado : super.getCadrados()) {
-            cadrado.setX(cadrado.getX() - Xogo.LADO_CADRADO);
-        }
-        return true;
-    }
-
-    @Override
-    public boolean moverAbaixo() {
-        for (Cadrado cadrado : super.getCadrados()) {
-            cadrado.setY(cadrado.getY() + Xogo.LADO_CADRADO);
-        }
-        return false;
-    }
-
-    @Override
     public boolean rotar() {
-        if (rotacion) {
-            for (int i = 0; i < getCadrados().size(); i++) {
-                if (i == 0) {
-                    int cadrado0X = getCadrados().get(i).getX();
-                    getCadrados().get(i).setX(cadrado0X + Xogo.LADO_CADRADO * 2);
-                    int cadrado0Y = getCadrados().get(i).getY();
-                    getCadrados().get(i).setY(cadrado0Y - Xogo.LADO_CADRADO);
-                } else if (i == 3) {
-                    int cadrado3X = getCadrados().get(i).getY();
-                    getCadrados().get(i).setY(cadrado3X - Xogo.LADO_CADRADO);
-                }
-            }
-            rotacion = false;
+        if (!posicionRotacion) {
+            cadrado0.setY(cadrado0.getY() - Xogo.LADO_CADRADO * 2);
+            cadrado1.setX(cadrado1.getX() - Xogo.LADO_CADRADO);
+            cadrado1.setY(cadrado1.getY() - Xogo.LADO_CADRADO);
+            cadrado3.setX(cadrado3.getX() - Xogo.LADO_CADRADO);
+            cadrado3.setY(cadrado3.getY() + Xogo.LADO_CADRADO);
+            posicionRotacion = true;
         } else {
-            for (int i = 0; i < getCadrados().size(); i++) {
-                if (i == 0) {
-                    int cadrado0X = getCadrados().get(i).getX();
-                    getCadrados().get(i).setX(cadrado0X - Xogo.LADO_CADRADO * 2);
-                    int cadrado0Y = getCadrados().get(i).getY();
-                    getCadrados().get(i).setY(cadrado0Y + Xogo.LADO_CADRADO);
-                } else if (i == 3) {
-                    int cadrado3X = getCadrados().get(i).getY();
-                    getCadrados().get(i).setY(cadrado3X + Xogo.LADO_CADRADO);
-                }
-            }
-            rotacion = true;
+            cadrado0.setY(cadrado0.getY() + Xogo.LADO_CADRADO * 2);
+            cadrado1.setX(cadrado1.getX() + Xogo.LADO_CADRADO);
+            cadrado1.setY(cadrado1.getY() + Xogo.LADO_CADRADO);
+            cadrado3.setX(cadrado3.getX() + Xogo.LADO_CADRADO);
+            cadrado3.setY(cadrado3.getY() - Xogo.LADO_CADRADO);
+            posicionRotacion = false;
         }
         return false;
     }
@@ -76,10 +44,10 @@ public class FichaS extends Ficha {
         int ladoArriba = 0;
         int ladoAbaixo = Xogo.LADO_CADRADO;
         ArrayList<Cadrado> cadrados = new ArrayList<>();
-        Cadrado cadrado0 = new Cadrado(ladoEsquerdo, ladoAbaixo, Color.GREEN);
-        Cadrado cadrado1 = new Cadrado(ladoDereito, ladoAbaixo, Color.GREEN);
-        Cadrado cadrado2 = new Cadrado(ladoDereito, ladoArriba, Color.GREEN);
-        Cadrado cadrado3 = new Cadrado(ladoDereito + Xogo.LADO_CADRADO, ladoArriba, Color.GREEN);
+        cadrado0 = new Cadrado(ladoEsquerdo, ladoAbaixo, Color.GREEN);
+        cadrado1 = new Cadrado(ladoDereito, ladoAbaixo, Color.GREEN);
+        cadrado2 = new Cadrado(ladoDereito, ladoArriba, Color.GREEN);
+        cadrado3 = new Cadrado(ladoDereito + Xogo.LADO_CADRADO, ladoArriba, Color.GREEN);
         cadrados.add(cadrado0);
         cadrados.add(cadrado1);
         cadrados.add(cadrado2);

@@ -14,30 +14,6 @@ public class FichaCadrada extends Ficha {
     }
 
     @Override
-    public boolean moverDereita() {
-        for (Cadrado cadrado : super.getCadrados()) {
-            cadrado.setX(cadrado.getX() + Xogo.LADO_CADRADO);
-        }
-        return true;
-    }
-
-    @Override
-    public boolean moverEsquerda() {
-        for (Cadrado cadrado : super.getCadrados()) {
-            cadrado.setX(cadrado.getX() - Xogo.LADO_CADRADO);
-        }
-        return true;
-    }
-
-    @Override
-    public boolean moverAbaixo() {
-        for (Cadrado cadrado : super.getCadrados()) {
-            cadrado.setY(cadrado.getY() + Xogo.LADO_CADRADO);
-        }
-        return false;
-    }
-
-    @Override
     public boolean rotar() {
         return false;
     }
@@ -58,4 +34,5 @@ public class FichaCadrada extends Ficha {
         cadrados.add(cadrado3);
         return cadrados;
     }
+
 }

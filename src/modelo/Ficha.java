@@ -18,9 +18,26 @@ public abstract class Ficha {
         return xogo;
     }
 
-	public abstract boolean moverDereita();
-    public abstract boolean moverEsquerda();
-    public abstract boolean moverAbaixo();
+    public boolean moverDereita() {
+        for (Cadrado cadrado : cadrados) {
+            cadrado.setX(cadrado.getX() + Xogo.LADO_CADRADO);
+        }
+        return true;
+    }
+
+    public boolean moverEsquerda() {
+        for (Cadrado cadrado : cadrados) {
+            cadrado.setX(cadrado.getX() - Xogo.LADO_CADRADO);
+        }
+        return true;
+    }
+
+    public boolean moverAbaixo() {
+        for (Cadrado cadrado : cadrados) {
+            cadrado.setY(cadrado.getY() + Xogo.LADO_CADRADO);
+        }
+        return false;
+    }
     public abstract boolean rotar();
 
 }

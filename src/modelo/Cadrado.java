@@ -11,6 +11,18 @@ public class Cadrado{
     private Color corRecheo;
     private JLabel lblCadrado;
 
+    public Cadrado(int x, int y, Color corRecheo) {
+        this.x = x;
+        this.y = y;
+        this.corRecheo = corRecheo;
+        JLabel cadrado = new JLabel();
+        cadrado.setBounds(this.x, this.y, Xogo.LADO_CADRADO, Xogo.LADO_CADRADO);
+        cadrado.setBackground(corRecheo);
+        cadrado.setOpaque(true);
+        cadrado.setBorder(new LineBorder(Color.BLACK, 2));
+        this.lblCadrado = cadrado;
+    }
+
     public int getX() {
         return x;
     }
@@ -39,20 +51,6 @@ public class Cadrado{
         this.corRecheo = corRecheo;
         lblCadrado.setBackground(corRecheo);
         lblCadrado.repaint();
-    }
-
-    public Cadrado(int x, int y, Color corRecheo) {
-    	this.x = x;
-    	this.y = y;
-    	this.corRecheo = corRecheo;
-
-
-    	JLabel cadrado = new JLabel();
-    	cadrado.setBounds(this.x, this.y, Xogo.LADO_CADRADO, Xogo.LADO_CADRADO);
-    	cadrado.setBackground(corRecheo);
-    	cadrado.setOpaque(true);
-    	cadrado.setBorder(new LineBorder(Color.BLACK, 2));
-    	this.lblCadrado = cadrado;
     }
 
     public String getCoordenadas() {
