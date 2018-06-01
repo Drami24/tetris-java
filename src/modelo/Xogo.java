@@ -19,7 +19,7 @@ public class Xogo {
     public final static int MAX_Y = 600;
     private boolean pausa;
     private int numeroLinas = 0;
-    private int nivelDificultade = 0;
+    private int nivelDificultade = 1;
     private VentanaPrincipal ventanaPrincipal;
     private ArrayList<Cadrado> cadradosChan = new ArrayList<>();
     private Ficha fichaActual;
@@ -49,33 +49,41 @@ public class Xogo {
     }
 
     public void moverFichaDereita() {
-        int movementoY = 0;
-        int movementoX = LADO_CADRADO;
-        if (fichaEPosicionValida(xerarCadradosFantasma(movementoX, movementoY), movementoY)) {
-            fichaActual.moverDereita();
+        if(!pausa){
+            int movementoY = 0;
+            int movementoX = LADO_CADRADO;
+            if (fichaEPosicionValida(xerarCadradosFantasma(movementoX, movementoY), movementoY)) {
+                fichaActual.moverDereita();
+            }
         }
+
     }
 
     public void moverFichaEsquerda() {
-        int movementoY = 0;
-        int movementoX = -LADO_CADRADO;
-        if (fichaEPosicionValida(xerarCadradosFantasma(movementoX, movementoY), movementoY)) {
-            fichaActual.moverEsquerda();
+        if(!pausa){
+            int movementoY = 0;
+            int movementoX = -LADO_CADRADO;
+            if (fichaEPosicionValida(xerarCadradosFantasma(movementoX, movementoY), movementoY)) {
+                fichaActual.moverEsquerda();
+            }
         }
     }
 
     public void moverFichaAbaixo() {
-        int movementoY = LADO_CADRADO;
-        int movementoX = 0;
-        ArrayList<Cadrado> cadradosFantasma = xerarCadradosFantasma(movementoX, movementoY);
-        if (fichaEPosicionValida(cadradosFantasma, movementoY)) {
-            fichaActual.moverAbaixo();
+        if(!pausa){
+            int movementoY = LADO_CADRADO;
+            int movementoX = 0;
+            ArrayList<Cadrado> cadradosFantasma = xerarCadradosFantasma(movementoX, movementoY);
+            if (fichaEPosicionValida(cadradosFantasma, movementoY)) {
+                fichaActual.moverAbaixo();
+            }
         }
-
     }
 
     public void rotarFicha() {
-        fichaActual.rotar();
+        if(!pausa){
+            fichaActual.rotar();
+        }
     }
 
     private ArrayList<Cadrado> xerarCadradosFantasma(int movementoX, int movementoY) {
@@ -246,6 +254,14 @@ public class Xogo {
         } else {
             return false;
         }
+    }
+
+    public void setPausa(boolean pausa) {
+        this.pausa = pausa;
+    }
+
+    public boolean isPausa() {
+        return pausa;
     }
 
     private void borrarLina(int y) {

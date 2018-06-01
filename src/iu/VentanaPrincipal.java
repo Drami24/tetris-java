@@ -47,7 +47,7 @@ public class VentanaPrincipal {
      */
     private JLabel lblDificultade;
     /**
-     * O encargado de iniciar a partida
+     * O E ao xogo que actualmente esta na vista
      */
     private Xogo xogoActual = null;
 
@@ -92,9 +92,10 @@ public class VentanaPrincipal {
      */
     private void iniciarPartida() {
         panelTetris.removeAll();
+        tglbtnPausa.setSelected(false);
         xogoActual = new Xogo(this);
         lblNumlinas.setText("Liñas eliminadas 0");
-        lblDificultade.setText("Nivel 0");
+        lblDificultade.setText("Nivel 1");
     }
 
     public void pintarCadrado(JLabel lblCadrado) {
@@ -176,7 +177,7 @@ public class VentanaPrincipal {
         panelXogo.add(crearBotonNovaPartida());
         panelXogo.add(crearBotonPausa());
         mostrarNumeroLinas(0);
-        mostrarDificultade(0);
+        mostrarDificultade(1);
         panelXogo.setVisible(true);
         return panelXogo;
     }
@@ -201,6 +202,11 @@ public class VentanaPrincipal {
      */
     private JToggleButton crearBotonPausa() {
         tglbtnPausa = new JToggleButton("Pausa");
+        tglbtnPausa.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                xogoActual.setPausa(tglbtnPausa.isSelected());
+            }
+        });
         tglbtnPausa.setBounds(324, 47, 150, 23);
         tglbtnPausa.setFocusable(false);
         return tglbtnPausa;
