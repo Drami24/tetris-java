@@ -4,8 +4,8 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 
-public class Cadrado{
-	
+public class Cadrado {
+
     private int x;
     private int y;
     private Color corRecheo;
@@ -57,7 +57,7 @@ public class Cadrado{
         return String.valueOf(x) + " " + String.valueOf(y);
     }
 
-    public JLabel getLblCadrado(){
+    public JLabel getLblCadrado() {
         return lblCadrado;
     }
 

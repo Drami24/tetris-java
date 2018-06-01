@@ -37,7 +37,7 @@ public class FichaT extends Ficha {
             posicionRotacion = 2;
         } else if (posicionRotacion == 2) {
             cadrado0.setX(cadrado0.getX() + Xogo.LADO_CADRADO);
-            cadrado0.setY(cadrado0.getY() - Xogo.LADO_CADRADO *2);
+            cadrado0.setY(cadrado0.getY() - Xogo.LADO_CADRADO * 2);
             cadrado1.setY(cadrado1.getY() - Xogo.LADO_CADRADO);
             cadrado2.setX(cadrado2.getX() - Xogo.LADO_CADRADO);
             cadrado3.setX(cadrado3.getX() + Xogo.LADO_CADRADO);

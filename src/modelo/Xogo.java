@@ -10,6 +10,9 @@ import tiposficha.*;
 
 import javax.swing.*;
 
+/**
+ * Esta clase encargase das mecánicas do xogo
+ */
 public class Xogo {
     public final static int LADO_CADRADO = 30;
     public final static int MAX_X = 300;
@@ -44,7 +47,6 @@ public class Xogo {
             timerXogo.setDelay(timerXogo.getDelay() - 100);
         }
     }
-
 
     public void moverFichaDereita() {
         int movementoY = 0;
@@ -190,7 +192,6 @@ public class Xogo {
     }
 
     private Ficha xenerarNovaFicha() {
-        //   int figuraFicha;
         Random r = new Random();
         int fichaAleatoria = r.nextInt(7);
         switch (fichaAleatoria) {
@@ -294,7 +295,7 @@ public class Xogo {
 
     private void gameOver() {
         timerXogo.stop();
-        JOptionPane.showMessageDialog(null, "HA PERDIDO, inténtelo de nuevo.");
+        ventanaPrincipal.mostrarFinDoXogo();
     }
 
     private boolean chegouFichaArriba() {

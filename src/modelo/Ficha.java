@@ -36,7 +36,7 @@ public abstract class Ficha {
         for (Cadrado cadrado : cadrados) {
             cadrado.setY(cadrado.getY() + Xogo.LADO_CADRADO);
         }
-        return false;
+        return true;
     }
 
     public abstract boolean rotar();
