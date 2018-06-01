@@ -226,6 +226,7 @@ public class VentanaPrincipal {
                 }
 			}
 		});
+		btnEsquerda.setFocusable(false);
 		btnEsquerda.setBounds(324, 473, 89, 23);
 		panelXogo.add(btnEsquerda);
 
@@ -237,6 +238,7 @@ public class VentanaPrincipal {
                 }
 			}
 		});
+		btnDereita.setFocusable(false);
 		btnDereita.setBounds(425, 473, 89, 23);
 		panelXogo.add(btnDereita);
 
@@ -248,6 +250,7 @@ public class VentanaPrincipal {
                 }
 			}
 		});
+		btnAbaixo.setFocusable(false);
 		btnAbaixo.setBounds(324, 511, 89, 23);
 		panelXogo.add(btnAbaixo);
 
@@ -259,6 +262,7 @@ public class VentanaPrincipal {
                 }
 			}
 		});
+		btnRotar.setFocusable(false);
 		btnRotar.setBounds(425, 508, 89, 23);
 		panelXogo.add(btnRotar);
 	}
