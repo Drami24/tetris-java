@@ -97,6 +97,8 @@ public class VentanaPrincipal {
 	private void iniciarPartida() {
 		panelTetris.removeAll();
 		xogoActual = new Xogo(this);
+        lblNumlinas.setText("Liñas eliminadas 0");
+		lblDificultade.setText("Nivel 0");
 	}
 
 	public void setTimer(Timer timer){
@@ -219,7 +221,9 @@ public class VentanaPrincipal {
 		JButton btnEsquerda = new JButton("Esquerda");
 		btnEsquerda.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				xogoActual.moverFichaEsquerda();
+			    if (xogoActual != null) {
+                    xogoActual.moverFichaEsquerda();
+                }
 			}
 		});
 		btnEsquerda.setBounds(324, 473, 89, 23);
@@ -228,7 +232,9 @@ public class VentanaPrincipal {
 		JButton btnDereita = new JButton("Dereita");
 		btnDereita.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				xogoActual.moverFichaDereita();
+			    if (xogoActual != null) {
+                    xogoActual.moverFichaDereita();
+                }
 			}
 		});
 		btnDereita.setBounds(425, 473, 89, 23);
@@ -237,7 +243,9 @@ public class VentanaPrincipal {
 		JButton btnAbaixo = new JButton("Abaixo");
 		btnAbaixo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				xogoActual.moverFichaAbaixo();
+			    if (xogoActual != null) {
+                    xogoActual.moverFichaAbaixo();
+                }
 			}
 		});
 		btnAbaixo.setBounds(324, 511, 89, 23);
@@ -246,6 +254,9 @@ public class VentanaPrincipal {
 		JButton btnRotar = new JButton("Rotar");
 		btnRotar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+			    if (xogoActual != null) {
+                    xogoActual.rotarFicha();
+                }
 			}
 		});
 		btnRotar.setBounds(425, 508, 89, 23);
@@ -258,17 +269,24 @@ public class VentanaPrincipal {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-					xogoActual.moverFichaEsquerda();
+				    if (xogoActual != null) {
+                        xogoActual.moverFichaEsquerda();
+                    }
 				}
 				if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-					xogoActual.moverFichaDereita();
+                    if (xogoActual != null) {
+                        xogoActual.moverFichaDereita();
+                    }
 				}
 				if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-					xogoActual.moverFichaAbaixo();
+                    if (xogoActual != null) {
+                        xogoActual.moverFichaAbaixo();
+                    }
 				}
 				if (e.getKeyCode() == KeyEvent.VK_UP) {
-					xogoActual.rotarFicha();
-					System.out.println("arriba");
+                    if (xogoActual != null) {
+                        xogoActual.rotarFicha();
+                    }
 				}
 			}
 		});

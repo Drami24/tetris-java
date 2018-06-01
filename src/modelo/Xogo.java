@@ -22,22 +22,6 @@ public class Xogo {
     private Ficha fichaActual;
     private Timer timerXogo;
 
-    public int getNumeroLinas() {
-        return numeroLinas;
-    }
-
-    public Ficha getFichaActual() {
-        return fichaActual;
-    }
-
-    public VentanaPrincipal getVentanaPrincipal() {
-        return ventanaPrincipal;
-    }
-
-    public void setVentanaPrincipal(VentanaPrincipal ventanaPrincipal) {
-        this.ventanaPrincipal = ventanaPrincipal;
-    }
-
     public Xogo(VentanaPrincipal ventanaPrincipal) {
         this.ventanaPrincipal = ventanaPrincipal;
         ActionListener eventoTimer = new ActionListener() {
@@ -61,9 +45,6 @@ public class Xogo {
         }
     }
 
-    public int getNivelDificultade() {
-        return nivelDificultade;
-    }
 
     public void moverFichaDereita() {
         int movementoY = 0;
@@ -163,16 +144,10 @@ public class Xogo {
      */
     public Boolean estaFora(int x, int y) {
         if (x + LADO_CADRADO > MAX_X || x < 0) {
-            System.out.println("Esta fora");
-            System.out.println(x + " " + y);
             return true;
         } else if (y > MAX_Y) {
-            System.out.println("Esta fora y max");
-            System.out.println(x + " " + y);
             return true;
         } else {
-            System.out.println("Non esta fora");
-            System.out.println(x + " " + y);
             return false;
         }
     }
@@ -216,14 +191,8 @@ public class Xogo {
 
     private Ficha xenerarNovaFicha() {
         //   int figuraFicha;
-
         Random r = new Random();
         int fichaAleatoria = r.nextInt(7);
-
-     /*   if (fichaAleatoria == comprobarRepeticion) {
-            System.out.println("repetido");
-        }*/
-
         switch (fichaAleatoria) {
             case 0:
                 fichaActual = new FichaCadrada();
@@ -278,15 +247,12 @@ public class Xogo {
         }
     }
 
-
     private void borrarLina(int y) {
-        int cadradosBorrados = 0;
         ArrayList<Cadrado> cadradosBufer = new ArrayList<>();
         cadradosBufer.addAll(cadradosChan);
         for (Cadrado cadrado : cadradosBufer) {
             if (cadrado.getY() == y) {
                 cadradosChan.remove(cadrado);
-                System.out.println(cadradosBorrados++);
                 ventanaPrincipal.borrarCadrado(cadrado.getLblCadrado());
             }
         }
@@ -305,7 +271,6 @@ public class Xogo {
             }
         }
     }
-
 
     /**
      * Comproba se unhas coordenadas coinciden con coordenadas de un cadro bloqueado
