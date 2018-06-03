@@ -14,8 +14,13 @@ public class FichaCadrada extends Ficha {
     }
 
     @Override
-    public boolean rotar() {
-        return false;
+    public ArrayList<Cadrado> obterFantasmaRotacion(int numeroRotacion) {
+        Cadrado cadradoFantasma0 = copiarCadrado(super.getCadrados().get(0));
+        Cadrado cadradoFantasma1 = copiarCadrado(super.getCadrados().get(1));
+        Cadrado cadradoFantasma2 = copiarCadrado(super.getCadrados().get(2));
+        Cadrado cadradoFantasma3 = copiarCadrado(super.getCadrados().get(3));
+
+        return crearFantasma(cadradoFantasma0, cadradoFantasma1, cadradoFantasma2, cadradoFantasma3);
     }
 
     private ArrayList<Cadrado> xerarCadrados() {

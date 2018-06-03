@@ -19,23 +19,42 @@ public class FichaZ extends Ficha {
     }
 
     @Override
-    public boolean rotar() {
-        if (!posicionRotacion) {
-            cadrado0.setX(cadrado0.getX() + Xogo.LADO_CADRADO);
-            cadrado0.setY(cadrado0.getY() + Xogo.LADO_CADRADO);
-            cadrado2.setX(cadrado2.getX() + Xogo.LADO_CADRADO);
-            cadrado2.setY(cadrado2.getY() - Xogo.LADO_CADRADO);
-            cadrado3.setY(cadrado3.getY() - Xogo.LADO_CADRADO * 2);
-            posicionRotacion = true;
-        } else {
-            cadrado0.setX(cadrado0.getX() - Xogo.LADO_CADRADO);
-            cadrado0.setY(cadrado0.getY() - Xogo.LADO_CADRADO);
-            cadrado2.setX(cadrado2.getX() - Xogo.LADO_CADRADO);
-            cadrado2.setY(cadrado2.getY() + Xogo.LADO_CADRADO);
-            cadrado3.setY(cadrado3.getY() + Xogo.LADO_CADRADO * 2);
-            posicionRotacion = false;
+    public ArrayList<Cadrado> obterFantasmaRotacion(int numeroRotacion) {
+        Cadrado cadradoFantasma0 = copiarCadrado(cadrado0);
+        Cadrado cadradoFantasma1 = copiarCadrado(cadrado1);
+        Cadrado cadradoFantasma2 = copiarCadrado(cadrado2);
+        Cadrado cadradoFantasma3 = copiarCadrado(cadrado3);
+        switch (numeroRotacion){
+            case 0:
+                cadradoFantasma0.setX(cadrado0.getX() + Xogo.LADO_CADRADO);
+                cadradoFantasma0.setY(cadrado0.getY() + Xogo.LADO_CADRADO);
+                cadradoFantasma2.setX(cadrado2.getX() + Xogo.LADO_CADRADO);
+                cadradoFantasma2.setY(cadrado2.getY() - Xogo.LADO_CADRADO);
+                cadradoFantasma3.setY(cadrado3.getY() - Xogo.LADO_CADRADO * 2);
+                break;
+            case 1:
+                cadradoFantasma0.setX(cadrado0.getX() - Xogo.LADO_CADRADO);
+                cadradoFantasma0.setY(cadrado0.getY() - Xogo.LADO_CADRADO);
+                cadradoFantasma2.setX(cadrado2.getX() - Xogo.LADO_CADRADO);
+                cadradoFantasma2.setY(cadrado2.getY() + Xogo.LADO_CADRADO);
+                cadradoFantasma3.setY(cadrado3.getY() + Xogo.LADO_CADRADO * 2);
+                break;
+            case 2:
+                cadradoFantasma0.setX(cadrado0.getX() + Xogo.LADO_CADRADO);
+                cadradoFantasma0.setY(cadrado0.getY() + Xogo.LADO_CADRADO);
+                cadradoFantasma2.setX(cadrado2.getX() + Xogo.LADO_CADRADO);
+                cadradoFantasma2.setY(cadrado2.getY() - Xogo.LADO_CADRADO);
+                cadradoFantasma3.setY(cadrado3.getY() - Xogo.LADO_CADRADO * 2);
+                break;
+            case 3:
+                cadradoFantasma0.setX(cadrado0.getX() - Xogo.LADO_CADRADO);
+                cadradoFantasma0.setY(cadrado0.getY() - Xogo.LADO_CADRADO);
+                cadradoFantasma2.setX(cadrado2.getX() - Xogo.LADO_CADRADO);
+                cadradoFantasma2.setY(cadrado2.getY() + Xogo.LADO_CADRADO);
+                cadradoFantasma3.setY(cadrado3.getY() + Xogo.LADO_CADRADO * 2);
+                break;
         }
-        return false;
+        return crearFantasma(cadradoFantasma0, cadradoFantasma1, cadradoFantasma2, cadradoFantasma3);
     }
 
     private ArrayList<Cadrado> xerarCadrados() {

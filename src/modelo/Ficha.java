@@ -39,6 +39,28 @@ public abstract class Ficha {
         return true;
     }
 
-    public abstract boolean rotar();
+    public boolean rotar(ArrayList<Cadrado> fantasmaFicha){
+        for(int i = 0; i < cadrados.size(); i++){
+            cadrados.get(i).setY(fantasmaFicha.get(i).getY());
+            cadrados.get(i).setX(fantasmaFicha.get(i).getX());
+        }
+        return false;
+    }
+
+    public abstract ArrayList<Cadrado> obterFantasmaRotacion(int numeroRotacion);
+
+    protected  ArrayList<Cadrado> crearFantasma (Cadrado cadrado0, Cadrado cadrado1, Cadrado cadrado2, Cadrado cadrado3){
+        ArrayList<Cadrado> cadradosFantasma = new ArrayList<>();
+        cadradosFantasma.add(cadrado0);
+        cadradosFantasma.add(cadrado1);
+        cadradosFantasma.add(cadrado2);
+        cadradosFantasma.add(cadrado3);
+        return cadradosFantasma;
+    }
+
+    protected Cadrado copiarCadrado(Cadrado cadradoACopiar) {
+        Cadrado copiaCadrado = new Cadrado(cadradoACopiar.getX(), cadradoACopiar.getY(), cadradoACopiar.getCorRecheo());
+        return copiaCadrado;
+    }
 
 }

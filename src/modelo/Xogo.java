@@ -18,6 +18,7 @@ public class Xogo {
     public final static int MAX_X = 300;
     public final static int MAX_Y = 600;
     private boolean pausa;
+    private byte numeroRotacion = 0;
     private int numeroLinas = 0;
     private int nivelDificultade = 1;
     private VentanaPrincipal ventanaPrincipal;
@@ -82,7 +83,14 @@ public class Xogo {
 
     public void rotarFicha() {
         if(!pausa){
-            fichaActual.rotar();
+            numeroRotacion++;
+            if(numeroRotacion > 3){
+                numeroRotacion = 0;
+            }
+            ArrayList<Cadrado> fantasmaRotacion = fichaActual.obterFantasmaRotacion(numeroRotacion);
+            if(fichaEPosicionValida(fantasmaRotacion)) {
+                fichaActual.rotar(fantasmaRotacion);
+            }
         }
     }
 
@@ -135,6 +143,21 @@ public class Xogo {
         return false;
     }
 
+    public Boolean ePosicionValida(int x, int y) {
+        if (!estaFora(x, y)) {
+            if (!tocaOchan(y)) {
+                if (colisiona(x, y)) {
+                    return false;
+                } else {
+                    return true;
+                }
+            } else {
+                finalFicha();
+            }
+        }
+        return false;
+    }
+
     public void finalFicha() {
         if (chegouFichaArriba()) {
             gameOver();
@@ -176,6 +199,14 @@ public class Xogo {
         }
     }
 
+    public boolean cadradoEPosicionValida(Cadrado cadrado) {
+        if (ePosicionValida(cadrado.getX(), cadrado.getY())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     /**
      * Comproba se un array de cadrados teñen unha posicion valida
      *
@@ -185,6 +216,15 @@ public class Xogo {
     public boolean fichaEPosicionValida(ArrayList<Cadrado> cadradosFicha, int movementoY) {
         for (Cadrado cadrado : cadradosFicha) {
             if (!cadradoEPosicionValida(cadrado, movementoY)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean fichaEPosicionValida(ArrayList<Cadrado> cadradosFicha) {
+        for (Cadrado cadrado : cadradosFicha) {
+            if (!cadradoEPosicionValida(cadrado)) {
                 return false;
             }
         }
